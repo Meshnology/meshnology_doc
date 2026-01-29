@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-N39/Meshnology N39" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">N39 WiFi LoRa 32 V4 Development Kit | Meshnology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wiki.meshnology.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://wiki.meshnology.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://wiki.meshnology.com/N39/Meshnology N39"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="N39 WiFi LoRa 32 V4 Development Kit | Meshnology"><meta data-rh="true" name="description" content="1.  Overview"><meta data-rh="true" property="og:description" content="1.  Overview"><link data-rh="true" rel="icon" href="/img/logo.png"><link data-rh="true" rel="canonical" href="https://wiki.meshnology.com/N39/Meshnology N39"><link data-rh="true" rel="alternate" href="https://wiki.meshnology.com/N39/Meshnology N39" hreflang="en"><link data-rh="true" rel="alternate" href="https://wiki.meshnology.com/N39/Meshnology N39" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.c39f5f79.css">
+<script src="/assets/js/runtime~main.3c4d597c.js" defer="defer"></script>
+<script src="/assets/js/main.37a6167b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://meshnology.com/" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div><b class="navbar__title text--truncate">Meshnology</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Meshnology_Wiki_Code_Lab">Start</a><a href="https://meshnology.com/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Community<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/meshnology/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link" href="/N39/Meshnology N39"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/N39/Meshnology N39" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Meshnology_Wiki_Code_Lab">Meshnology Wiki &amp; Code Lab</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Welcome/">1. Welcome</a><button aria-label="Expand sidebar category &#x27;1. Welcome&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/System_configuration">2. N30 Series For LoRa</a><button aria-label="Expand sidebar category &#x27;2. N30 Series For LoRa&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Basic_Application">3 Data For Boards &amp; Nodes</a><button aria-label="Expand sidebar category &#x27;3 Data For Boards &amp; Nodes&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/RDK_X5/">4 RDK X5</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N37_Series/Meshnology N37">5. N37 Series For LoRa</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/N39/Meshnology N39">6. N39 WiFi LoRa 32 V4</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/N39/Meshnology N39">N39 WiFi LoRa 32 V4 Development Kit</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">6. N39 WiFi LoRa 32 V4</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">N39 WiFi LoRa 32 V4 Development Kit</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>N39 WiFi LoRa 32 V4 Development Kit</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1overview">1.  Overview<a class="hash-link" aria-label="Direct link to 1.  Overview" title="Direct link to 1.  Overview" href="/N39/Meshnology N39#1overview">​</a></h2>
+<p><strong>Meshnology N39 WiFi LoRa 32 V4 Development Kit</strong> An upgraded LoRa development board based on ESP32-S3R2 + SX1262, supporting <strong>Wi-Fi (802.11 b/g/n)</strong>, <strong>Bluetooth BLE</strong> and <strong>LoRa</strong> wireless communications. Ideal for Meshtastic nodes and diverse IoT applications. Supports solar input, lithium battery power supply, and GNSS expansion.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2productdescription">2. Product Description<a class="hash-link" aria-label="Direct link to 2. Product Description" title="Direct link to 2. Product Description" href="/N39/Meshnology N39#2productdescription">​</a></h2>
+<p>This development kit represents the <strong>V4 upgrade</strong> to the classic WiFi LoRa series, delivering significant enhancements in performance, power consumption, memory capacity, and expandability:</p>
+<ul>
+<li>
+<p>Main controller: ESP32-S3R2 dual-core processor</p>
+</li>
+<li>
+<p>LoRa chip: SX1262, maximum output power of 27 ± 1 dBm</p>
+</li>
+<li>
+<p>Memory: 2 MB PSRAM + 16 MB external Flash</p>
+</li>
+<li>
+<p>Display: 0.96-inch OLED</p>
+</li>
+<li>
+<p>Power supply: USB-C powered, 3000 mAh rechargeable lithium battery (pre-installed)</p>
+</li>
+<li>
+<p>Extension: Supports Solar input and GNSS expansion interface</p>
+</li>
+<li>
+<p>Applicable frequency band: 863–928 MHz LoRa frequency range (via hardware matching)</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3technical-specifications">3. Technical Specifications<a class="hash-link" aria-label="Direct link to 3. Technical Specifications" title="Direct link to 3. Technical Specifications" href="/N39/Meshnology N39#3technical-specifications">​</a></h2>
+<table><thead><tr><th>Parameter Classification</th><th>Detailed Explanation</th></tr></thead><tbody><tr><td>MCU</td><td>ESP32-S3R2 Dual-Core (Wi-Fi, Bluetooth 5 &amp; BLE)</td></tr><tr><td>LoRa</td><td>Semtech SX1262, supporting 863–928 MHz</td></tr><tr><td>Output power</td><td>27 ± 1 dBm</td></tr><tr><td>Memory</td><td>2 MB PSRAM + 16 MB Flash</td></tr><tr><td>Display screen</td><td>0.96″ OLED（128×64）</td></tr><tr><td>Power supply</td><td>USB-C / 3000 mAh battery / Solar input</td></tr><tr><td>Extension Interface</td><td>GNSS (SH1.25-8Pin), Solar (SH1.25-2P)</td></tr><tr><td>Dimensions (approximately)</td><td>85 × 45 × 35 mm（Including the casing）</td></tr><tr><td>Weight (approximately)</td><td>~100 g（Including battery and casing）</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4hardwaredetails">4. Hardware Details<a class="hash-link" aria-label="Direct link to 4. Hardware Details" title="Direct link to 4. Hardware Details" href="/N39/Meshnology N39#4hardwaredetails">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41pin-description">4.1 Pin Description<a class="hash-link" aria-label="Direct link to 4.1 Pin Description" title="Direct link to 4.1 Pin Description" href="/N39/Meshnology N39#41pin-description">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/details1-023613e103d6c55da57d987a6c7c0e89.png" width="1464" height="600" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/details2-106aa8dd3077a7a18b706bd77591b7ad.png" width="1464" height="600" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/details3-b164da66195f4434f9d2471266bbb5d1.png" width="1464" height="600" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/details4-4243477a8628dfa6b107f396e9431cb8.png" width="1464" height="600" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="42on-board-interface-specifications">4.2 On-Board Interface Specifications<a class="hash-link" aria-label="Direct link to 4.2 On-Board Interface Specifications" title="Direct link to 4.2 On-Board Interface Specifications" href="/N39/Meshnology N39#42on-board-interface-specifications">​</a></h3>
+<ul>
+<li>
+<p><strong>USB-C Interface</strong>：Power supply and firmware programming</p>
+</li>
+<li>
+<p><strong>OLED display screen</strong>：Real-time status information and debugging output</p>
+</li>
+<li>
+<p><strong>LoRa Antenna interface</strong>：863–928 MHz Antenna</p>
+</li>
+<li>
+<p><strong>GNSS Expansion port</strong>：Supports GPS expansion module</p>
+</li>
+<li>
+<p><strong>Solar Import port</strong>：Can be connected to solar panels</p>
+</li>
+<li>
+<p><strong>Lithium battery holder</strong>：Pre-installed 3000 mAh battery with automatic power switching capability</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="43power-consumption-and-power-management">4.3 Power Consumption and Power Management<a class="hash-link" aria-label="Direct link to 4.3 Power Consumption and Power Management" title="Direct link to 4.3 Power Consumption and Power Management" href="/N39/Meshnology N39#43power-consumption-and-power-management">​</a></h3>
+<p>V4 supports an <strong>ultra-low power standby mode</strong> (≤ 20 µA), featuring <strong>overcharge protection, over-discharge protection</strong> and an automatic priority USB/Solar/Battery power supply strategy.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5gettingstarted">5.  Getting Started<a class="hash-link" aria-label="Direct link to 5.  Getting Started" title="Direct link to 5.  Getting Started" href="/N39/Meshnology N39#5gettingstarted">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="51contents-of-the-box">5.1 Contents of the box<a class="hash-link" aria-label="Direct link to 5.1 Contents of the box" title="Direct link to 5.1 Contents of the box" href="/N39/Meshnology N39#51contents-of-the-box">​</a></h3>
+<ul>
+<li>
+<p>Heltec WiFi LoRa 32 V4 Development Board</p>
+</li>
+<li>
+<p>3000 mAh rechargeable lithium battery (pre-installed)</p>
+</li>
+<li>
+<p>863–928 MHz LoRa antenna</p>
+</li>
+<li>
+<p>N39 3D Protective Case Kit (Multiple Colour Options)</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52initial-connection">5.2 Initial connection<a class="hash-link" aria-label="Direct link to 5.2 Initial connection" title="Direct link to 5.2 Initial connection" href="/N39/Meshnology N39#52initial-connection">​</a></h3>
+<ol>
+<li>
+<p>Connect to a computer via USB-C (for power supply and firmware programming)</p>
+</li>
+<li>
+<p>Switch on the OLED display to observe the basic start-up information.</p>
+</li>
+<li>
+<p>Configure Meshtastic Settings (e.g. Zone / Frequency)</p>
+</li>
+<li>
+<p>Download and install the Meshtastic App for Bluetooth pairing.</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-use">How to use<a class="hash-link" aria-label="Direct link to How to use" title="Direct link to How to use" href="/N39/Meshnology N39#how-to-use">​</a></h2>
+<p>Note: This guide uses the WiFi LoRa 32 V3 as an example to demonstrate the complete Meshtastic setup, starting from firmware flashing.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-esp32-usb-to-serial-adapter">Install ESP32 USB to Serial Adapter<a class="hash-link" aria-label="Direct link to Install ESP32 USB to Serial Adapter" title="Direct link to Install ESP32 USB to Serial Adapter" href="/N39/Meshnology N39#install-esp32-usb-to-serial-adapter">​</a></h3>
+<p>Connect your computer to the device using a USB cable. Open your computer&#x27;s <code>Device Manager</code> and check the <code>Ports</code> section. If the computer fails to recognise the device, you may need to download and install the CP210X USB-to-UART bridge driver from Silicon Labs:<a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=overview" target="_blank" rel="noopener noreferrer">CP210X USB to UART Bridge - Downloads</a></p>
+<p>‼️Presentation</p>
+<blockquote>
+<p>After installing the driver, please ensure you restart your computer to complete the installation process.</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-use-the-webpage">How to use the webpage<a class="hash-link" aria-label="Direct link to How to use the webpage" title="Direct link to How to use the webpage" href="/N39/Meshnology N39#how-to-use-the-webpage">​</a></h3>
+<p>The web-based installer requires Chrome or Edge browsers and is an excellent choice for rapidly flashing device firmware. This method is straightforward to use, particularly suited to new users of the project, and is therefore highly recommended for firmware flashing.</p>
+<ol>
+<li>
+<p>Insert your device.</p>
+</li>
+<li>
+<p>Accessing <a href="https://flasher.meshtastic.org/" target="_blank" rel="noopener noreferrer">flasher.meshtastic.org</a> requires the Chrome or Edge browser. Follow the instructions and select the corresponding circuit board model.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use1-de146682bb0ce83f27272244b4b0bc32.png" width="1860" height="942" class="img_ev3q"></p>
+</li>
+<li>
+<p>Select the appropriate firmware version; it is generally recommended to use the latest stable release.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use2-8b29ed30e33c5f939e9926eb747a3afd.png" width="1858" height="941" class="img_ev3q"></p>
+</li>
+<li>
+<p>Click the Flash button.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use3-8b29ed30e33c5f939e9926eb747a3afd.png" width="1858" height="941" class="img_ev3q"></p>
+<p>‼️Presentation</p>
+<p>Network issues may prevent Flash buttons from being clickable. Naturally, buttons may occasionally appear greyed out yet remain functional.</p>
+</li>
+<li>
+<p>Carry on.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use4-a33273f1a4e949caca05aa77a50853f9.png" width="1860" height="942" class="img_ev3q"></p>
+</li>
+<li>
+<p>Click<code>Full Erase and Install</code>，Then click<code>Erase flash and install</code>。</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use5-d56e180f4a0c0911ec30d1cbcc5f7cfc.png" width="1860" height="942" class="img_ev3q"></p>
+<p>💡Presentation</p>
+<p>Network issues are causing the Flash page to continuously display &quot;Connecting...&quot;</p>
+</li>
+<li>
+<p>Once the firmware update is complete, your device screen will display <code>Meshtastic</code>.</p>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use6-b5b0de89df77a79907edc92c8b4d5ad3.png" width="1280" height="741" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="installing-meshtastic">Installing Meshtastic<a class="hash-link" aria-label="Direct link to Installing Meshtastic" title="Direct link to Installing Meshtastic" href="/N39/Meshnology N39#installing-meshtastic">​</a></h3>
+<ul>
+<li>
+<p><a href="https://meshtastic.org/docs/software/android/installation/" target="_blank" rel="noopener noreferrer">Android application</a></p>
+</li>
+<li>
+<p><a href="https://client.meshtastic.org/" target="_blank" rel="noopener noreferrer">Web client</a></p>
+</li>
+<li>
+<p><a href="https://meshtastic.org/docs/software/apple/installation/" target="_blank" rel="noopener noreferrer">iOS/iPadOS/macOS applications</a></p>
+</li>
+</ul>
+<p><em>Taking the Android system as an example, we shall demonstrate the basic usage of the app. We will continue to update the procedures for iOS and web versions in the future.</em></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="setup-area">Setup Area<a class="hash-link" aria-label="Direct link to Setup Area" title="Direct link to Setup Area" href="/N39/Meshnology N39#setup-area">​</a></h3>
+<p>To commence communication via mesh networks, you must configure your regional settings. This configuration governs the frequency range utilised by your device and should be adjusted according to your geographical location.</p>
+<ol>
+<li>
+<p>Open the application and locate your device via Bluetooth (as shown below). Tap to connect the device.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use7-aac09ae7948d9825ff3fcc4d5b181dcb.png" width="540" height="1200" class="img_ev3q"><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use8-11ff098eae096f762de6a96a19613c14.png" width="540" height="1200" class="img_ev3q"></p>
+<p>💡Presentation</p>
+<p>Should a window prompting for a verification code appear, you will need to consult your device&#x27;s display. For devices lacking a screen, the default verification code is typically 123456. If this does not apply, please contact the firmware publisher.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use9-f3983bcf7c26dfff8ada93da3ec089f7.png" width="1080" height="1047" class="img_ev3q"></p>
+</li>
+<li>
+<p>After pairing is successful, click &#x27;Cancel Setup&#x27; next to the device name. Select the appropriate region from the list based on your location. Naturally, your hardware must support this frequency band.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use10-879d145d2b2cc11e1fb0e1ac4ebaf512.png" width="540" height="777" class="img_ev3q"></p>
+<p>You may refer to this link to understand the relationship between LoRaWAN frequency bands and regions:<a href="https://docs.heltec.org/general/lorawan_frequency_plans_by_country.html" target="_blank" rel="noopener noreferrer">LoRaWAN_frequency_plans_by_country</a></p>
+<p>Notes</p>
+<p>The hourly duty cycle for EU_433 and EU_868 is limited to 10%. Should this limit be reached, your device will cease transmission until it is authorised to transmit again.</p>
+</li>
+<li>
+<p>Click the option below to select the channel you wish to join.</p>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use11-60dc6ce66918f0dad0f5e20f81157e17.png" width="540" height="864" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting started<a class="hash-link" aria-label="Direct link to Getting started" title="Direct link to Getting started" href="/N39/Meshnology N39#getting-started">​</a></h3>
+<ol>
+<li>
+<p>The map option will enable viewing of a companion&#x27;s location information, which may be provided by the device&#x27;s GPS module or by a mobile phone connected to the device.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use12-b26482f1140d96889d4ff0dee001f1fb.png" width="540" height="734" class="img_ev3q"></p>
+</li>
+<li>
+<p>The following options display information about the accompanying device, such as latitude and longitude, signal strength, battery level, and so forth.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use13-f57045d255f26d449eb46c973fffc05b.png" width="540" height="693" class="img_ev3q"></p>
+</li>
+<li>
+<p>Here you can view the messages you wish to send and receive, which will appear on your device&#x27;s screen.</p>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use14-05b841eb84a63ca812c81a1abe62f2de.png" width="1080" height="674" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="further-settings-and-usage-instructions">Further settings and usage instructions<a class="hash-link" aria-label="Direct link to Further settings and usage instructions" title="Direct link to Further settings and usage instructions" href="/N39/Meshnology N39#further-settings-and-usage-instructions">​</a></h3>
+<p>Click the button in the top-right corner to view more configurable options.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/use15-0ebfd6639ced5351de50c908d8f4fde1.png" width="540" height="740" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6docsguides">6. Docs &amp; Guides<a class="hash-link" aria-label="Direct link to 6. Docs &amp; Guides" title="Direct link to 6. Docs &amp; Guides" href="/N39/Meshnology N39#6docsguides">​</a></h2>
+<ul>
+<li>
+<p><a href="https://docs.heltec.org/en/node/esp32/wifi_lora_32/index.html" target="_blank" rel="noopener noreferrer">User Manual</a></p>
+</li>
+<li>
+<p><a href="https://cdn.shopify.com/s/files/1/0736/4090/2894/files/WiFi_LoRa_32_V4.2.pdf?v=1758865454" target="_blank" rel="noopener noreferrer">Schematic Diagram V4.2</a></p>
+</li>
+<li>
+<p><a href="https://cdn.shopify.com/s/files/1/0736/4090/2894/files/Expansion_board_V0.7.pdf?v=1758865454" target="_blank" rel="noopener noreferrer">Expansion Board V0.7</a></p>
+</li>
+<li>
+<p><a href="https://cdn.shopify.com/s/files/1/0736/4090/2894/files/WiFi_LoRa_32_V4.1_alpha.pdf?v=1758865454" target="_blank" rel="noopener noreferrer">Schematic Diagram V4.1 Alpha</a></p>
+</li>
+<li>
+<p><a href="https://resource.heltec.cn/download/WiFi_LoRa_32_V4/3D" target="_blank" rel="noopener noreferrer">Core Board 3D Model Diagram</a></p>
+</li>
+<li>
+<p><a href="https://resource.heltec.cn/download/WiFi_LoRa_32_V4/" target="_blank" rel="noopener noreferrer">Downloadable resources</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series" target="_blank" rel="noopener noreferrer">ESP32 framework</a></p>
+</li>
+<li>
+<p><a href="https://github.com/HelTecAutomation/Heltec_ESP32" target="_blank" rel="noopener noreferrer">ESP32 Extension Library</a></p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="61official-firmware">6.1 Official firmware<a class="hash-link" aria-label="Direct link to 6.1 Official firmware" title="Direct link to 6.1 Official firmware" href="/N39/Meshnology N39#61official-firmware">​</a></h3>
+<ul>
+<li>
+<p><strong>Meshtastic Official Firmware</strong> (Source Code + Pre-compiled)</p>
+<ul>
+<li>
+<p>Main firmware（LoRa Node）</p>
+</li>
+<li>
+<p>Wi-Fi / BLE Support Branch (e.g. using Meshtastic + Wi-Fi)</p>
+</li>
+<li>
+<p>Download path: Meshtastic GitHub (example)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="62build-and-flash">6.2 Build and flash<a class="hash-link" aria-label="Direct link to 6.2 Build and flash" title="Direct link to 6.2 Build and flash" href="/N39/Meshnology N39#62build-and-flash">​</a></h3>
+<ul>
+<li>
+<p><strong>Build tool</strong>：PlatformIO / Arduino IDE / ESP-IDF</p>
+</li>
+<li>
+<p><strong>Programming method</strong>：</p>
+<ul>
+<li>
+<p>Upload directly using <code>esptool.py</code> or PlatformIO</p>
+</li>
+<li>
+<p>Entering Bootloader mode facilitates the flashing process.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="63sample-project">6.3 Sample Project<a class="hash-link" aria-label="Direct link to 6.3 Sample Project" title="Direct link to 6.3 Sample Project" href="/N39/Meshnology N39#63sample-project">​</a></h3>
+<ul>
+<li>
+<p>Basic LoRa Messaging</p>
+</li>
+<li>
+<p>Wi-Fi HTTP / BLE Compatible</p>
+</li>
+<li>
+<p>Solar power &amp; battery monitor demo</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8videosmedia">8. 📺 Videos &amp; Media<a class="hash-link" aria-label="Direct link to 8. 📺 Videos &amp; Media" title="Direct link to 8. 📺 Videos &amp; Media" href="/N39/Meshnology N39#8videosmedia">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="equipment-testing-and-demonstration">🎥 Equipment Testing and Demonstration<a class="hash-link" aria-label="Direct link to 🎥 Equipment Testing and Demonstration" title="Direct link to 🎥 Equipment Testing and Demonstration" href="/N39/Meshnology N39#equipment-testing-and-demonstration">​</a></h3>
+<p><a href="https://www.youtube.com/watch?v=hnwilTdHmaM" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=hnwilTdHmaM</a></p>
+<p><a href="https://www.youtube.com/watch?v=0W15kurpOd8&amp;t=608s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=0W15kurpOd8&amp;t=608s</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="9faq">9. FAQ<a class="hash-link" aria-label="Direct link to 9. FAQ" title="Direct link to 9. FAQ" href="/N39/Meshnology N39#9faq">​</a></h2>
+<p><strong>Q1. Which development environments are supported?</strong>
+A：Supports common ESP32 development tools such as the Arduino IDE, PlatformIO, and ESP-IDF. </p>
+<p><strong>Q2. How to optimise LoRa transmission parameters?</strong><br>
+<!-- -->A：Configure Meshtastic settings according to statutory frequency band allocations, SF (spread factor) and Bandwidth.</p>
+<p><strong>Q3. How to use GNSS?</strong><br>
+<!-- -->A：Connect the GNSS module via the SH1.25-8Pin interface and utilise the corresponding firmware for expansion. </p>
+<p><strong>Q4. 2.4GHz antenna</strong><br>
+<!-- -->A：The default 2.4G FPC antenna is located on the side of the plastic screen bracket.</p>
+<p><img decoding="async" loading="lazy" alt="image" src="/assets/images/9_1-303cd71a774036b68d975d8380787658.png" width="300" height="261" class="img_ev3q"></p>
+<p>If you wish to use the 2.4G antenna connected via IPEX, you must remove the inductor marked as <strong>① in the diagram below and add a 0-ohm resistor (or other conductive metal or cable) at the position marked as ② to connect to the IPEX interface.</strong></p>
+<p><img decoding="async" loading="lazy" alt="image" src="/assets/images/9_2-1f7c3afe5d67d0f29c1a52760d4f1acc.png" width="300" height="146" class="img_ev3q"></p>
+<p><strong>Q5. My screw looks a bit odd?</strong><br>
+<!-- -->A：This area incorporates a 2.4 GHz FPC antenna. To prevent compromising its performance, custom-made <strong>plastic screws</strong> have been employed here.</p>
+<p>This is why they look different from ordinary screws.
+When disassembly is required, simply press down gently with a screwdriver and turn.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/9_3-89cf238fe711db7a433e4ad44d9ab52c.png" width="300" height="163" class="img_ev3q"></p>
+<p><strong>Q6. What type of battery socket is it?</strong><br>
+<!-- -->A：You can find this type of socket by searching for &quot;SH1.25 x 2&quot;.</p>
+<p><strong>Q7. Are Heltec V3 and V4 compatible?</strong><br>
+<!-- -->A：<strong>They are compatible in most cases.</strong> As V4 utilises the same series of chips as V3, features identical OLED displays, and possesses virtually identical pin layouts, V3 and V4 units are interchangeable in most scenarios. However, due to increased transmission power, the transmission power settings within certain code may no longer correspond directly to the actual output.</p>
+<p><strong>Q8. Code upload failed</strong><br>
+<!-- -->A：Please try the following steps：</p>
+<ol>
+<li>
+<p>Please try using a different USB cable.</p>
+</li>
+<li>
+<p>Enter bootloader mode. There are two methods to enter this mode.：</p>
+<ul>
+<li>Press and hold the <strong>PRG</strong> button, connect the USB-C cable, then release the <strong>PRG</strong> button.</li>
+<li>Connect the USB-C cable, press and hold the <strong>PRG</strong> button, press the <strong>RST</strong> button once, then release the <strong>PRG</strong> button.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Q9. Why are there no soldered resistors at the 868 and 915 markings? Which frequency band does my device actually support?</strong><br>
+<!-- -->A：It indicates simultaneous support for both the 868 MHz and 915 MHz frequency bands. In the initial design, we developed two separate hardware versions to achieve optimal radio frequency performance. However, through subsequent debugging, we successfully unified the hardware for both the 868 MHz and 915 MHz bands while maintaining excellent radio frequency characteristics.</p>
+<p><img decoding="async" loading="lazy" alt="image.png" src="/assets/images/9_4-709bb0f04ea160319bd8a0ddce075cd8.png" width="300" height="201" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="11references">11. References<a class="hash-link" aria-label="Direct link to 11. References" title="Direct link to 11. References" href="/N39/Meshnology N39#11references">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="compatible-antenna">Compatible antenna<a class="hash-link" aria-label="Direct link to Compatible antenna" title="Direct link to Compatible antenna" href="/N39/Meshnology N39#compatible-antenna">​</a></h3>
+<p>If you require assistance with <a href="https://meshnology.com/products/meshnology-n39-wifi-lora-32-v4-development-kit-3000mah-battery-863-928mhz-antennas" target="_blank" rel="noopener noreferrer">Meshnology N39</a>Replace the antenna，<a href="https://meshnology.com/collections/antenna" target="_blank" rel="noopener noreferrer">Click here👈</a> to obtain one.</p>
+<p>If you require access to<a href="https://meshnology.com/products/meshnology-n39-wifi-lora-32-v4-development-kit-3000mah-battery-863-928mhz-antennas" target="_blank" rel="noopener noreferrer">Meshnology N39</a>Complete kit，<a href="https://meshnology.com/products/meshnology-n39-wifi-lora-32-v4-development-kit-3000mah-battery-863-928mhz-antennas" target="_blank" rel="noopener noreferrer">Click here👈</a>Obtain one.</p>
+<p><strong>Meshtastic Official Hardware Support List</strong> (Heltec LoRa32 V4) <a href="https://meshtastic.org/docs/hardware/devices/heltec/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Meshtastic</a></p>
+<p><strong>Meshtastic Official GitHub</strong> (Firmware + Device Support)</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/N37_Series/Meshnology N37"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Meshnology N37 Wio Tracker L1</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#1overview">1.  Overview</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#2productdescription">2. Product Description</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#3technical-specifications">3. Technical Specifications</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#4hardwaredetails">4. Hardware Details</a><ul><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#41pin-description">4.1 Pin Description</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#42on-board-interface-specifications">4.2 On-Board Interface Specifications</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#43power-consumption-and-power-management">4.3 Power Consumption and Power Management</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#5gettingstarted">5.  Getting Started</a><ul><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#51contents-of-the-box">5.1 Contents of the box</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#52initial-connection">5.2 Initial connection</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#how-to-use">How to use</a><ul><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#install-esp32-usb-to-serial-adapter">Install ESP32 USB to Serial Adapter</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#how-to-use-the-webpage">How to use the webpage</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#installing-meshtastic">Installing Meshtastic</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#setup-area">Setup Area</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#getting-started">Getting started</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#further-settings-and-usage-instructions">Further settings and usage instructions</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#6docsguides">6. Docs &amp; Guides</a><ul><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#61official-firmware">6.1 Official firmware</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#62build-and-flash">6.2 Build and flash</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#63sample-project">6.3 Sample Project</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#8videosmedia">8. 📺 Videos &amp; Media</a><ul><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#equipment-testing-and-demonstration">🎥 Equipment Testing and Demonstration</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#9faq">9. FAQ</a></li><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#11references">11. References</a><ul><li><a class="table-of-contents__link toc-highlight" href="/N39/Meshnology N39#compatible-antenna">Compatible antenna</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.meshnology.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Homepage<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://meshnology.com/pages/contact/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact Us<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Follow Us</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/meshnology" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@meshnology/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.facebook.com/profile.php?id=61574010301135/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Facebook<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.instagram.com/meshnology/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Instagram<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Meshnology.</div></div></div></footer></div>
+</body>
+</html>
