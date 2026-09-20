@@ -3,11 +3,925 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
-<title data-rh="true">W15 ESP32-S3 LR2021 Dev Kit | Meshnology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wiki.meshnology.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://wiki.meshnology.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="W15 ESP32-S3 LR2021 Dev Kit | Meshnology"><link data-rh="true" rel="icon" href="/img/logo.png"><link data-rh="true" rel="canonical" href="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT"><link data-rh="true" rel="alternate" href="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT" hreflang="en"><link data-rh="true" rel="alternate" href="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.f4e0570e.css">
-<script src="/assets/js/runtime~main.719ee6b5.js" defer="defer"></script>
-<script src="/assets/js/main.7daf720a.js" defer="defer"></script>
+<title data-rh="true">W15 ESP32-S3 LR2021 Dev Kit | Meshnology</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wiki.meshnology.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://wiki.meshnology.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="W15 ESP32-S3 LR2021 Dev Kit | Meshnology"><meta data-rh="true" name="description" content="W15 specifications, pinout, Arduino setup, firmware flashing, and example programs."><meta data-rh="true" property="og:description" content="W15 specifications, pinout, Arduino setup, firmware flashing, and example programs."><link data-rh="true" rel="icon" href="/img/logo.png"><link data-rh="true" rel="canonical" href="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT"><link data-rh="true" rel="alternate" href="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT" hreflang="en"><link data-rh="true" rel="alternate" href="https://wiki.meshnology.com/W15/W15_ESP32-S3_LR2021_DEV_KIT" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.f4e0570e.css">
+<script src="/assets/js/runtime~main.703310a0.js" defer="defer"></script>
+<script src="/assets/js/main.bce85ce0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
-<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://meshnology.com/" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div><b class="navbar__title text--truncate">Meshnology</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Meshnology_Wiki_Code_Lab">Start</a><a href="https://meshnology.com/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Community<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/meshnology/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/W15/W15_ESP32-S3_LR2021_DEV_KIT" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Meshnology_Wiki_Code_Lab">Meshnology Wiki &amp; Code Lab</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Welcome/">1. Welcome</a><button aria-label="Expand sidebar category &#x27;1. Welcome&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/System_configuration">2. N30 Series For LoRa</a><button aria-label="Expand sidebar category &#x27;2. N30 Series For LoRa&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Basic_Application">3 Data For Boards &amp; Nodes</a><button aria-label="Expand sidebar category &#x27;3 Data For Boards &amp; Nodes&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/RDK_X5/">4 RDK X5</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N37_Series/Meshnology N37">5. N37 Series For LoRa</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N39/Meshnology N39">6. N39 WiFi LoRa 32 V4</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W10/W10_LoRa_AIOT_Dev_Kit">7. W10(LoRa AIOT Dev Kit)</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W11/W11_ESP32S3_Mini_Module">8. W11(ESP32S3 Mini Module)</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W12/W12_LR2021_Ultra_Long_Range_LoRa_Device">9. W12 LR2021 Ultra Long Range LoRa Device</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/category/10-n40-esp32-extension-board">10. N40 ESP32 Extension Board</a><button aria-label="Expand sidebar category &#x27;10. N40 ESP32 Extension Board&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N41/N41_WisBlock_IoT_Expansion_Base_Board">11. N41 WisBlock IoT Expansion Base Board</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W13/Mesh_Tracker_W13">12. Mesh Tracker W13 - WiFi LoRa Mesh GPS Tracking Node</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT">13. W15 ESP32-S3 LR2021 Dev Kit</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT">W15 ESP32-S3 LR2021 Dev Kit</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W16/W16_LR2021_RF_Transceiver_Module">14. W16 LR2021 RF Transceiver Module</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W20/W20_LoRa_GPS_Tracker">15. W20 LoRa GPS Tracker</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Ransanx/Ransanx_R150_DC_electronic_load_tester">16. Ransanx</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">13. W15 ESP32-S3 LR2021 Dev Kit</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">W15 ESP32-S3 LR2021 Dev Kit</span><meta itemprop="position" content="2"></li></ul></nav><div class="theme-doc-markdown markdown"><h1>W15 ESP32-S3 LR2021 Dev Kit</h1></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/W13/Mesh_Tracker_W13"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Mesh Tracker W13 - WiFi LoRa Mesh GPS Tracking Node</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/W16/W16_LR2021_RF_Transceiver_Module"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">W16 LR2021 RF Transceiver Module</div></a></nav></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.meshnology.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Homepage<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://meshnology.com/pages/contact/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact Us<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Follow Us</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/meshnology" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@meshnology/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.facebook.com/profile.php?id=61574010301135/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Facebook<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.instagram.com/meshnology/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Instagram<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Meshnology.</div></div></div></footer></div>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://meshnology.com/" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div><b class="navbar__title text--truncate">Meshnology</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Meshnology_Wiki_Code_Lab">Start</a><a href="https://meshnology.com/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Community<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/meshnology/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/W15/W15_ESP32-S3_LR2021_DEV_KIT" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Meshnology_Wiki_Code_Lab">Meshnology Wiki &amp; Code Lab</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Welcome/">1. Welcome</a><button aria-label="Expand sidebar category &#x27;1. Welcome&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/System_configuration">2. N30 Series For LoRa</a><button aria-label="Expand sidebar category &#x27;2. N30 Series For LoRa&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Basic_Application">3 Data For Boards &amp; Nodes</a><button aria-label="Expand sidebar category &#x27;3 Data For Boards &amp; Nodes&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/RDK_X5/">4 RDK X5</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N37_Series/Meshnology N37">5. N37 Series For LoRa</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N39/Meshnology N39">6. N39 WiFi LoRa 32 V4</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W10/W10_LoRa_AIOT_Dev_Kit">7. W10(LoRa AIOT Dev Kit)</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W11/W11_ESP32S3_Mini_Module">8. W11(ESP32S3 Mini Module)</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W12/W12_LR2021_Ultra_Long_Range_LoRa_Device">9. W12 LR2021 Ultra Long Range LoRa Device</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/category/10-n40-esp32-extension-board">10. N40 ESP32 Extension Board</a><button aria-label="Expand sidebar category &#x27;10. N40 ESP32 Extension Board&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/N41/N41_WisBlock_IoT_Expansion_Base_Board">11. N41 WisBlock IoT Expansion Base Board</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W13/Mesh_Tracker_W13">12. Mesh Tracker W13 - WiFi LoRa Mesh GPS Tracking Node</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT">13. W15 ESP32-S3 LR2021 Dev Kit</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT">W15 ESP32-S3 LR2021 Dev Kit</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W16/W16_LR2021_RF_Transceiver_Module">14. W16 LR2021 RF Transceiver Module</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/W20/W20_LoRa_GPS_Tracker">15. W20 LoRa GPS Tracker</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Ransanx/Ransanx_R150_DC_electronic_load_tester">16. Ransanx</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">13. W15 ESP32-S3 LR2021 Dev Kit</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">W15 ESP32-S3 LR2021 Dev Kit</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>W15 ESP32-S3 LR2021 Dev Kit</h1>
+<p>The W15 combines an ESP32-S3 controller, an LR2021 radio, Wi-Fi, Bluetooth Low Energy, an OLED display, and accessible GPIO headers. This guide covers the hardware, Arduino IDE setup, firmware flashing, and the included examples.</p>
+<blockquote>
+<p><strong>Important:</strong> Connect the correct antenna before transmitting. Select only frequencies permitted in your region. GPIO uses 3.3 V logic and must not be connected directly to 5 V signals.</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="product-overview">Product overview<a class="hash-link" aria-label="Direct link to Product overview" title="Direct link to Product overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#product-overview">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="product-introduction">Product introduction<a class="hash-link" aria-label="Direct link to Product introduction" title="Direct link to Product introduction" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#product-introduction">​</a></h3>
+<p>The ESP32-S3 LR2021 DEV KIT development board is a developer hardware platform designed to combine LoRa, Wi-Fi, and BLE connectivity for IoT development: &quot;one board for remote</p>
+<p>monitoring + high-speed cloud connectivity + local O&amp;M&quot;.</p>
+<p>The product is equipped with the ESP32-S3R8 main controller and the LR2021 radio, and supports dual-band Sub-GHz and 2.4GHz LoRa communication. It integrates Wi-Fi and Bluetooth, and is suitable for a wide range of application scenarios such as industrial IoT, smart agriculture, smart cities, and outdoor communication.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="product-image">Product image<a class="hash-link" aria-label="Direct link to Product image" title="Direct link to Product image" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#product-image">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Product image step 1" src="/assets/images/image1-50397d717de154a2a5e83e22ce477ec1.png" width="678" height="678" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="target-applications">Target applications<a class="hash-link" aria-label="Direct link to Target applications" title="Direct link to Target applications" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#target-applications">​</a></h3>
+<ul>
+<li>
+<p><strong>Industrial IoT</strong>: temperature and humidity monitoring, circuit monitoring, vibration monitoring, gateway data transmission, device control</p>
+</li>
+<li>
+<p><strong>Smart Agriculture</strong>: soil moisture monitoring, temperature/humidity/light monitoring, livestock positioning, irrigation valve control</p>
+</li>
+<li>
+<p><strong>Smart Security</strong>: infrared monitoring, vibration monitoring, inspection wristband positioning, camera intrusion monitoring</p>
+</li>
+<li>
+<p><strong>Smart City</strong>: streetlight control, PM2.5 monitoring, noise monitoring, data aggregation to the cloud</p>
+</li>
+<li>
+<p><strong>Outdoor Communication</strong>: earthquake rescue communication, photovoltaic power generation monitoring, gateway data exchange</p>
+</li>
+<li>
+<p><strong>Maker Education</strong>: teaching course practice, smart environment monitoring models, smart farm models</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="specifications">Specifications<a class="hash-link" aria-label="Direct link to Specifications" title="Direct link to Specifications" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#specifications">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-specifications">Hardware specifications<a class="hash-link" aria-label="Direct link to Hardware specifications" title="Direct link to Hardware specifications" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-specifications">​</a></h3>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>Category</strong></p></td><td><p><strong>Parameter</strong></p></td><td><p><strong>Specification</strong></p></td></tr><tr><td><p><strong>Processor &amp; Memory</strong></p></td><td><p>Main controller</p></td><td><p>ESP32-S3R8</p></td></tr><tr><td></td><td><p>Processor</p><p>architecture</p></td><td><p>Xtensa LX7 dual-core 32-bit, 240MHz</p></td></tr><tr><td></td><td><p>RAM</p></td><td><p>8MB PSRAM</p></td></tr><tr><td></td><td><p>Flash</p></td><td><p>8MB SPI Flash</p></td></tr><tr><td></td><td><p>LoRa chip</p></td><td><p>LR2021 radio transceiver</p></td></tr><tr><td><p><strong>Wi-Fi</strong></p><p><strong>Specifications</strong></p></td><td><p>Standard</p></td><td><p>IEEE 802.11 b/g/n (@2.4 GHz)</p></td></tr><tr><td></td><td><p>Frequency band</p></td><td><p>2.4GHz</p></td></tr><tr><td></td><td><p>Channel</p></td><td><p>2.4 GHz: Ch1 ~ Ch13</p></td></tr><tr><td></td><td><p>Modulation</p></td><td><p>802.11b: DQPSK, DBPSK, CCK; 802.11g/n OFDM: 64-QAM, 16-QAM, QPSK, BPSK</p></td></tr><tr><td></td><td><p>Transmission range</p></td><td><p>Indoor ≥50m, open environment ≥100m</p></td></tr><tr><td></td><td><p>Packet loss rate</p></td><td><p>≤1% (at 80m)</p></td></tr><tr><td><p><strong>Bluetooth</strong></p><p><strong>Specifications</strong></p></td><td><p>Wireless standard</p></td><td><p>Bluetooth 5.0 (BLE)</p></td></tr><tr><td></td><td><p>Operating frequency</p></td><td><p>2.4GHz</p></td></tr><tr><td></td><td><p>Channel</p></td><td><p>LE: Ch0 ~ Ch39</p></td></tr><tr><td></td><td><p>Modulation</p></td><td><p>GFSK</p></td></tr><tr><td></td><td><p>Transmit power</p></td><td><p>-24 ~ 20 dBm</p></td></tr><tr><td></td><td><p>Maximum input level</p></td><td><p>8 dBm, Typical</p></td></tr><tr><td></td><td><p>Transmission range</p></td><td><p>Indoor ≥ 32 m, open environment ≥ 80 m</p></td></tr><tr><td><p><strong>LoRa</strong></p><p><strong>Specifications</strong></p></td><td><p>Supported bands</p></td><td><p>Sub-GHz (860–930 MHz) + 2.4 GHz dual band</p></td></tr></tbody></table>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>Category</strong></p></td><td><p><strong>Parameter</strong></p></td><td><p><strong>Specification</strong></p></td></tr><tr><td></td><td><p>Modulation</p></td><td><p>LoRa / GFSK / FLRC</p></td></tr><tr><td></td><td><p>Sub-GHz transmit power</p></td><td><p>Max 22dBm</p></td></tr><tr><td></td><td><p>2.4GHz transmit power</p></td><td><p>Max 8dBm (This version has not been optimized</p><p>2.4 GHz RF matching; the module&#x27;s measured maximum transmission power is 8 dBm)</p></td></tr><tr><td></td><td><p>Receiver sensitivity</p></td><td><p>Down to -141.5 dBm</p></td></tr><tr><td></td><td><p>FLRC high-speed mode</p></td><td><p>Up to 2.6 Mbps</p></td></tr><tr><td></td><td><p>Sub-GHz</p><p>transmission range</p></td><td><p>Open area ≥5 km, urban ≥1 km</p></td></tr><tr><td></td><td><p>2.4GHz</p><p>transmission range</p></td><td><p>TBD</p></td></tr><tr><td><p><strong>Physical</strong></p><p><strong>Characteristics</strong></p></td><td><p>Board dimensions</p></td><td><p>57 × 28 × 1.6 mm</p></td></tr><tr><td></td><td><p>Enclosure</p><p>dimensions</p></td><td><p>73.0 × 49.2 × 30.0 mm</p></td></tr><tr><td></td><td><p>Overall height (incl. LoRa antenna)</p></td><td><p>186 mm</p></td></tr><tr><td></td><td><p>Weight (single board)</p></td><td><p>Approx. 12g</p></td></tr><tr><td></td><td><p>PCB material</p></td><td><p>FR-4, 1.6mm thickness</p></td></tr><tr><td></td><td><p>PCB process</p></td><td><p>ENIG (immersion gold) process, improving oxidation resistance and soldering reliability</p></td></tr><tr><td></td><td><p>Pin process</p></td><td><p>Gold-plated, insertion/removal life ≥1000 cycles</p></td></tr><tr><td><p><strong>External</strong></p><p><strong>Interfaces</strong></p></td><td><p>USB interface</p></td><td><p>2 × Type-C (power supply, firmware flashing, serial debugging)</p></td></tr><tr><td></td><td><p>Antenna interface</p></td><td><p>2 × IPEX 1.0 (Wi-Fi antenna, LoRa antenna)</p></td></tr><tr><td></td><td><p>Reset button</p></td><td><p>1 × RST button (hardware reset)</p></td></tr><tr><td></td><td><p>Boot button</p></td><td><p>1 × BOOT button (download mode / user- defined)</p></td></tr><tr><td></td><td><p>LED indicator</p></td><td><p>1 × user-programmable LED</p></td></tr><tr><td></td><td><p>Expanded GPIO</p></td><td><p>26 multiplexable GPIO pins</p></td></tr><tr><td></td><td><p>Battery interface</p></td><td><p>Supports lithium battery charging</p></td></tr><tr><td><p><strong>Peripheral Support</strong></p></td><td><p>GPIO multiplexing</p></td><td><p>ADC, I2C, I2S, SPI, UART, PWM</p></td></tr></tbody></table>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>Category</strong></p></td><td><p><strong>Parameter</strong></p></td><td><p><strong>Specification</strong></p></td></tr><tr><td><p><strong>Electrical</strong></p><p><strong>Characteristics</strong></p></td><td><p>Supply voltage</p></td><td><p>5V (USB Type-C powered)</p></td></tr><tr><td></td><td><p>Operating voltage</p></td><td><p>3.3V</p></td></tr><tr><td></td><td><p>Maximum I/O output current</p></td><td><p>Single pin ≤20mA, total I/O current ≤100mA</p></td></tr><tr><td></td><td><p>Charging efficiency</p></td><td><p>≥85% (lithium battery charging)</p></td></tr><tr><td></td><td><p>Startup time</p></td><td><p>≤1 second (from power-off to normal operation)</p></td></tr><tr><td></td><td><p>Operating</p><p>temperature</p></td><td><p>-40℃ ~ 85℃ (industrial grade)</p></td></tr><tr><td></td><td><p>Storage</p><p>temperature</p></td><td><p>-40℃ ~ 125℃</p></td></tr><tr><td></td><td><p>Operating humidity</p></td><td><p>10% ~ 90% RH (non-condensing)</p></td></tr><tr><td><p><strong>Reliability Metrics</strong></p></td><td><p>Mean time between failures (MTBF)</p></td><td><p>≥20,000 hours</p></td></tr><tr><td></td><td><p>ESD protection</p></td><td><p>Contact discharge ±8 kV, air discharge ±15 kV</p></td></tr><tr><td></td><td><p>Vibration resistance</p></td><td><p>10~2000 Hz, 10g acceleration</p></td></tr><tr><td></td><td><p>Shock resistance</p></td><td><p>1000g, 0.5 ms half-sine wave</p></td></tr><tr><td><p><strong>Compliance &amp; Certification</strong></p></td><td><p>Wireless</p><p>certification</p></td><td><p>CE (EN 300 328), FCC Part 15B/15C</p></td></tr><tr><td></td><td><p>Electrical safety</p></td><td><p>IEC 62368-1</p></td></tr><tr><td></td><td><p>Environmental standards</p></td><td><p>RoHS 2.0, REACH</p></td></tr><tr><td></td><td><p>EMC</p></td><td><p>Complies with CE EN 300 328, FCC Part 15B standards</p></td></tr><tr><td><p><strong>Antenna</strong></p><p><strong>Configuration</strong></p></td><td><p>2.4G FPC high-gain antenna</p></td><td><p>2dBi / Wi-Fi·BLE communication, built-in/on-board</p></td></tr><tr><td></td><td><p>LoRa rubber-duck antenna</p></td><td><p>2dBi / Sub-G·2.4G dual band, general outdoor communication</p></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="software-support">Software support<a class="hash-link" aria-label="Direct link to Software support" title="Direct link to Software support" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#software-support">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="development-frameworks">Development frameworks<a class="hash-link" aria-label="Direct link to Development frameworks" title="Direct link to Development frameworks" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#development-frameworks">​</a></h3>
+<ul>
+<li>
+<p><strong>Arduino IDE</strong>: Beginner-friendly, with a dedicated core library</p>
+</li>
+<li>
+<p><strong>ESP-IDF v5.0+</strong>: Professional development framework, supports multitasking and low-power configuration</p>
+</li>
+<li>
+<p><strong>MicroPython</strong>: Script-based programming, ideal for rapid prototyping</p>
+</li>
+<li>
+<p><strong>PlatformIO</strong>: Integrated into VS Code, supports remote compilation</p>
+</li>
+<li>
+<p><strong>RT-Thread RTOS</strong>: Industrial-grade real-time operating system</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="protocol-support">Protocol support<a class="hash-link" aria-label="Direct link to Protocol support" title="Direct link to Protocol support" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#protocol-support">​</a></h3>
+<ul>
+<li>
+<p><strong>LoRaWAN 1.0.2/1.1</strong> (Class A/B/C)</p>
+</li>
+<li>
+<p><strong>Meshtastic 2.0 / MeshCore</strong> (self-organizing mesh protocols)</p>
+</li>
+<li>
+<p><strong>TCP/UDP/HTTP(S)/MQTT/MQTT-SN</strong> full-stack network protocols</p>
+</li>
+<li>
+<p><strong>CoAP</strong> (lightweight IoT protocol)</p>
+</li>
+<li>
+<p><strong>LoRa Edge</strong> geolocation protocol</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pinout">Pinout<a class="hash-link" aria-label="Direct link to Pinout" title="Direct link to Pinout" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#pinout">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Pinout step 4" src="/assets/images/image4-937ad45018f70ebd49a9c1423d73fc1a.png" width="678" height="328" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Pinout step 5" src="/assets/images/image5-a8c95bb26bc3b3e9b9fec4fcb132f755.png" width="678" height="668" class="img_ev3q"></p>
+<p>1. Expanded IO ports: from bottom-left to bottom-right</p>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>No.</strong></p></td><td><p><strong>Name</strong></p></td><td><p><strong>Definition</strong></p></td></tr><tr><td><p>1</p></td><td><p>GND</p></td><td><p>—</p></td></tr><tr><td><p>2</p></td><td><p>TXD</p></td><td><p>U0TXD/GPIO43/CLK_OUT1</p></td></tr><tr><td><p>3</p></td><td><p>RXD</p></td><td><p>U0RXD/GPIO44/CLK_OUT2</p></td></tr><tr><td><p>4</p></td><td><p>GPIO01</p></td><td><p>RTC_GPIO1/GPIO1/TOUCH1/ADC1_CH0</p></td></tr><tr><td><p>5</p></td><td><p>GPIO02</p></td><td><p>RTC_GPIO2/GPIO2/TOUCH2/ADC1_CH1</p></td></tr><tr><td><p>6</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>7</p></td><td><p>NC</p></td><td><p>—</p></td></tr></tbody></table>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>No.</strong></p></td><td><p><strong>Name</strong></p></td><td><p><strong>Definition</strong></p></td></tr><tr><td><p>8</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>9</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>10</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>11</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>12</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>13</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>14</p></td><td><p>GPIO00</p></td><td><p>RTC_GPIO0/GPIO0/BOOT</p></td></tr><tr><td><p>15</p></td><td><p>GPIO45</p></td><td><p>GPIO45</p></td></tr><tr><td><p>16</p></td><td><p>GPIO48</p></td><td><p>SPICLK_N_DIFF/GPIO48/SUBSPICLK_N_DIFF</p></td></tr><tr><td><p>17</p></td><td><p>GPIO47</p></td><td><p>SPICLK_P_DIFF/GPIO47/SUBSPICLK_P_DIFF</p></td></tr><tr><td><p>18</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>19</p></td><td><p>GPIO20</p></td><td><p>RTC_GPIO20/GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+</p></td></tr><tr><td><p>20</p></td><td><p>GPIO19</p></td><td><p>RTC_GPIO19/GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-</p></td></tr><tr><td><p>21</p></td><td><p>GND</p></td><td><p>—</p></td></tr><tr><td><p>22</p></td><td><p>GND</p></td><td><p>—</p></td></tr></tbody></table>
+<p>2. Expanded IO ports: from top-left to top-right</p>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>No.</strong></p></td><td><p><strong>Name</strong></p></td><td><p><strong>Definition</strong></p></td></tr><tr><td><p>1</p></td><td><p>3V3</p></td><td><p>—</p></td></tr><tr><td><p>2</p></td><td><p>3V3</p></td><td><p>—</p></td></tr><tr><td><p>3</p></td><td><p>RST</p></td><td><p>RST/CHIP_UP</p></td></tr><tr><td><p>4</p></td><td><p>GPIO04</p></td><td><p>RTC_GPIO4/GPIO4/TOUCH4/ADC1_CH3</p></td></tr><tr><td><p>5</p></td><td><p>GPIO05</p></td><td><p>RTC_GPIO5/GPIO5/TOUCH5/ADC1_CH4</p></td></tr><tr><td><p>6</p></td><td><p>GPIO06</p></td><td><p>RTC_GPIO6/GPIO6/TOUCH6/ADC1_CH5</p></td></tr><tr><td><p>7</p></td><td><p>GPIO07</p></td><td><p>RTC_GPIO7/GPIO7/TOUCH7/ADC1_CH6</p></td></tr><tr><td><p>8</p></td><td><p>GPIO15</p></td><td><p>RTC_GPIO15/GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P</p></td></tr><tr><td><p>9</p></td><td><p>GPIO16</p></td><td><p>RTC_GPIO16/GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N</p></td></tr><tr><td><p>10</p></td><td><p>NC</p></td><td><p>—</p></td></tr><tr><td><p>11</p></td><td><p>GPIO18</p></td><td><p>TC_GPIO18/GPIO18/U1RXD/ADC2_CH7/CLK_OUT3</p></td></tr><tr><td><p>12</p></td><td><p>GPIO08</p></td><td><p>RTC_GPIO8/GPIO8/TOUCH8/ADC1_CH7/SUBSPICS1</p></td></tr><tr><td><p>13</p></td><td><p>GPIO03</p></td><td><p>RTC_GPIO3/GPIO3/TOUCH3/ADC1_CH2</p></td></tr></tbody></table>
+<table><colgroup><col><col><col></colgroup><tbody><tr><td><p><strong>No.</strong></p></td><td><p><strong>Name</strong></p></td><td><p><strong>Definition</strong></p></td></tr><tr><td><p>14</p></td><td><p>GPIO46</p></td><td><p>GPIO46</p></td></tr><tr><td><p>15</p></td><td><p>GPIO09</p></td><td><p>RTC_GPIO9/GPIO9/TOUCH9/ADC1_CH8/FSPIHD/SUBSPIHD</p></td></tr><tr><td><p>16</p></td><td><p>GPIO10</p></td><td><p>TC_GPIO10/GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4,SUBSPICS</p></td></tr><tr><td><p>17</p></td><td><p>GPIO11</p></td><td><p>TC_GPIO11/GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5/SUBPID</p></td></tr><tr><td><p>18</p></td><td><p>GPIO12</p></td><td><p>TC_GPIO12/GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6,SUBSPICL</p></td></tr><tr><td><p>19</p></td><td><p>GPIO13</p></td><td><p>TC_GPIO13/GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7/SUBSPIQ</p></td></tr><tr><td><p>20</p></td><td><p>GPIO14</p></td><td><p>TC_GPIO14/GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS,SUBSPIW</p></td></tr><tr><td><p>21</p></td><td><p>5V</p></td><td><p>—</p></td></tr><tr><td><p>22</p></td><td><p>GND</p></td><td><p>—</p></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dimensions">Dimensions<a class="hash-link" aria-label="Direct link to Dimensions" title="Direct link to Dimensions" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#dimensions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mechanical-drawing">Mechanical drawing<a class="hash-link" aria-label="Direct link to Mechanical drawing" title="Direct link to Mechanical drawing" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#mechanical-drawing">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Mechanical drawing step 6" src="/assets/images/image6-6b2fb8abdde1549edfea2414199b6186.png" width="678" height="678" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting started<a class="hash-link" aria-label="Direct link to Getting started" title="Direct link to Getting started" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#getting-started">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-requirements">Hardware requirements<a class="hash-link" aria-label="Direct link to Hardware requirements" title="Direct link to Hardware requirements" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-requirements">​</a></h3>
+<ul>
+<li>W15 ESP32-S3 LR2021 development kit</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="software-requirements">Software requirements<a class="hash-link" aria-label="Direct link to Software requirements" title="Direct link to Software requirements" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#software-requirements">​</a></h3>
+<ul>
+<li>
+<p>Arduino IDE, flash_download_tool</p>
+</li>
+<li>
+<p>You can also develop using the ESP-IDF plugin in VS Code</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="arduino-ide-setup">Arduino IDE setup<a class="hash-link" aria-label="Direct link to Arduino IDE setup" title="Direct link to Arduino IDE setup" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#arduino-ide-setup">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="set-up-the-development-environment">Set up the development environment<a class="hash-link" aria-label="Direct link to Set up the development environment" title="Direct link to Set up the development environment" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#set-up-the-development-environment">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-arduino-ide">Install Arduino IDE<a class="hash-link" aria-label="Direct link to Install Arduino IDE" title="Direct link to Install Arduino IDE" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#install-arduino-ide">​</a></h3>
+<p>Arduino download site: <a href="https://www.arduino.cc/en/software/" target="_blank" rel="noopener noreferrer"><u>arduino.cc/en/software</u></a></p>
+<p><img decoding="async" loading="lazy" alt="Install Arduino IDE step 7" src="/assets/images/image7-8e3c983440869fd41c5d9d6b928f38f4.png" width="678" height="417" class="img_ev3q"></p>
+<p>Download and install the software following the Arduino installation instructions</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-the-esp32-board-package">Install the ESP32 board package<a class="hash-link" aria-label="Direct link to Install the ESP32 board package" title="Direct link to Install the ESP32 board package" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#install-the-esp32-board-package">​</a></h3>
+<ul>
+<li>
+<p>To use ESP32-based boards in the Arduino IDE, you must first install the “esp32 by Espressif Systems” board package.</p>
+</li>
+<li>
+<p>Install in accordance with the panel installation requirements. Once you have opened the software</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Install the ESP32 board package step 9" src="/assets/images/image9-851ed2cc150c95fe3ec4be94ecef7583.png" width="251" height="446" class="img_ev3q"></p>
+<p>Add the address of the development board manager</p>
+<ul>
+<li>Link to the stable release:</li>
+</ul>
+<p><a href="https://espressif.github.io/arduino-esp32/package_esp32_index.json" target="_blank" rel="noopener noreferrer"><u>https://espressif.github.io/arduino-esp32/package_esp32_index.json</u></a></p>
+<ul>
+<li>Link to the development version:</li>
+</ul>
+<p><a href="https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json" target="_blank" rel="noopener noreferrer"><u>https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json</u></a></p>
+<p><img decoding="async" loading="lazy" alt="Install the ESP32 board package step 10" src="/assets/images/image10-0b64feb2e3356607b3ed8341201bc710.png" width="678" height="451" class="img_ev3q"></p>
+<p>When you have finished, select OK</p>
+<ul>
+<li>
+<p>Select the Board Manager on the left-hand side of the software</p>
+</li>
+<li>
+<p>Search for &#x27;esp32&#x27; in the search bar</p>
+</li>
+<li>
+<p>In the version field for the ‘esp32 by Espressif Systems’ development board found in the search results, select a version of 3.2.0 or higher</p>
+</li>
+<li>
+<p>Click to install</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Install the ESP32 board package step 11" src="/assets/images/image11-1de27fd18e9a4a961010560d2f2de435.png" width="277" height="536" class="img_ev3q"></p>
+<ul>
+<li>Once you click it, a message like this will appear in the bottom-right corner of the software; please wait for the download to complete (ensure you have a stable internet connection).</li>
+</ul>
+<p>while waiting).</p>
+<p><img decoding="async" loading="lazy" alt="Install the ESP32 board package step 12" src="/assets/images/image12-bc445144d74ae94bc8d7c96cf0ddcedf.png" width="678" height="141" class="img_ev3q"></p>
+<ul>
+<li>Once the download is complete, a success message will appear</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Install the ESP32 board package step 13" src="/assets/images/image13-15caf80ba5efef0d6dd6294992e8e735.png" width="527" height="541" class="img_ev3q"></p>
+<ul>
+<li>When you search again, the word ‘installed’ will appear</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Install the ESP32 board package step 14" src="/assets/images/image14-ce1c3283cae18464fac3c0421f98fc72.png" width="273" height="537" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="select-the-board">Select the board<a class="hash-link" aria-label="Direct link to Select the board" title="Direct link to Select the board" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#select-the-board">​</a></h3>
+<p>The development board is an ESP32-S3 Dev Module</p>
+<p>Before each burn, you must check that the development board type is correct.</p>
+<p><img decoding="async" loading="lazy" alt="Select the board step 15" src="/assets/images/image15-2cea80fec302c2797555c582bab5557f.png" width="678" height="354" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="configure-the-board-parameters">Configure the board parameters<a class="hash-link" aria-label="Direct link to Configure the board parameters" title="Direct link to Configure the board parameters" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#configure-the-board-parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Configure the board parameters step 16" src="/assets/images/image16-5a4c196788513d4c98211de8bd9da29d.png" width="645" height="786" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-the-required-libraries">Install the required libraries<a class="hash-link" aria-label="Direct link to Install the required libraries" title="Direct link to Install the required libraries" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#install-the-required-libraries">​</a></h3>
+<p>When installing Arduino libraries, there are usually two options available: online installation and offline installation. If a library requires offline installation, you must use the provided library files. For most libraries, users can easily search for and install them via the Arduino software’s online library manager. However, some open-source or custom libraries are not synchronised with the</p>
+<p>Arduino library manager and therefore cannot be obtained via an online search. In such cases, users must install these libraries manually using the offline method.</p>
+<p>As the library files for this product are already included in the compressed package for the sample program, there is no need to download any additional libraries.</p>
+<p><img decoding="async" loading="lazy" alt="Install the required libraries step 17" src="/assets/images/image17-f319c0da9cad05acc6c0b7510bbde7bb.png" width="678" height="343" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="example-programs-and-firmware-files">Example programs and firmware files<a class="hash-link" aria-label="Direct link to Example programs and firmware files" title="Direct link to Example programs and firmware files" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#example-programs-and-firmware-files">​</a></h2>
+<p>All example programs have their own .ino files, which you can modify based on the source code to achieve the expected results. There are also pre-compiled .bin files that can be flashed</p>
+<p>directly with flash_download_tool.</p>
+<p>The .bin files ending with &quot;merged&quot; in each demo&#x27;s &quot;build&quot; folder can be flashed directly.</p>
+<p><img decoding="async" loading="lazy" alt="Example programs and firmware files step 18" src="/assets/images/image18-a7a58ada7b7574811262d7bf61d229fa.png" width="678" height="343" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flash-precompiled-firmware">Flash precompiled firmware<a class="hash-link" aria-label="Direct link to Flash precompiled firmware" title="Direct link to Flash precompiled firmware" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#flash-precompiled-firmware">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="flash-download-tool">Flash Download Tool<a class="hash-link" aria-label="Direct link to Flash Download Tool" title="Direct link to Flash Download Tool" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#flash-download-tool">​</a></h3>
+<p>Download flash_download_tool, official download link:</p>
+<p><a href="https://dl.espressif.com/public/flash_download_tool.zip" target="_blank" rel="noopener noreferrer"><u>https://dl.espressif.com/public/flash_download_tool.zip</u></a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tool-overview">Tool overview<a class="hash-link" aria-label="Direct link to Tool overview" title="Direct link to Tool overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#tool-overview">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="open-the-tool">Open the tool<a class="hash-link" aria-label="Direct link to Open the tool" title="Direct link to Open the tool" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#open-the-tool">​</a></h4>
+<p>Open the Flash Download Tool; double-click the .exe file to access the main interface, as shown below:</p>
+<p><img decoding="async" loading="lazy" alt="Open the tool step 19" src="/assets/images/image19-df7cefaa315c67383b5006708e81e2df.png" width="394" height="434" class="img_ev3q"></p>
+<ul>
+<li>
+<p>ChipType : Chip type: select according to the product type used</p>
+</li>
+<li>
+<p>WorkMode : Software mode: there are currently two modes — Develop mode and Factory mode — the differences are as follows:</p>
+</li>
+<li>
+<p>Develop : This mode uses the absolute path of the firmware and only supports flashing single-chip products.</p>
+</li>
+<li>
+<p>Factory : Since this mode uses relative paths, we recommend placing the firmware to be flashed in the &quot;bin&quot; folder at the same level as the .exe file; when the application is closed, the configuration is automatically saved locally.</p>
+</li>
+<li>
+<p>Factory : When opened, the interface is locked; you must click the &quot;Lock Settings&quot; button to enable editing. This prevents accidental mouse operations.</p>
+</li>
+<li>
+<p>LoadMode : The download interface supports UART and USB</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="spi-download-interface">SPI Download interface<a class="hash-link" aria-label="Direct link to SPI Download interface" title="Direct link to SPI Download interface" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#spi-download-interface">​</a></h4>
+<p>The following are configuration instructions:</p>
+<ul>
+<li>
+<p>Download Path Config : Include the firmware load path and download address, entered in hexadecimal format, e.g., 0x1000.</p>
+</li>
+<li>
+<p>SPI Flash Config</p>
+</li>
+<li>
+<p>SPI SPEED : SPI clock speed</p>
+</li>
+<li>
+<p>SPI MODE : SPI flash mode</p>
+</li>
+<li>
+<p>DETECTED INFO : Automatically detects flash and crystal oscillator information</p>
+</li>
+<li>
+<p>DoNotChgBin : If enabled, the original contents of the bin file will be flashed. If</p>
+</li>
+</ul>
+<p>disabled, the settings will be updated and flashed according to the SPI SPEED and SPI MODE configuration on the interface.</p>
+<ul>
+<li>CombineBin button: You can bundle multiple firmware files selected in the download path configuration into a single firmware file. If DoNotChgBin is enabled, the files will be bundled as-is. If DoNotChgBin is not enabled, the firmware will be bundled</li>
+</ul>
+<p>according to the SPI SPEED and SPI MODE settings on the interface. Non-data areas between firmware files are filled with 0xff. The merged firmware is saved as</p>
+<p>.combine/target.bin; each click overwrites the previous version.</p>
+<ul>
+<li>
+<p>Default button: Resets all SPI interface settings to default values</p>
+</li>
+<li>
+<p>Download Panel</p>
+</li>
+<li>
+<p>START : Start button</p>
+</li>
+<li>
+<p>STOP : Stop button</p>
+</li>
+<li>
+<p>ERASE : Full flash erase</p>
+</li>
+<li>
+<p>COM : Download serial port</p>
+</li>
+<li>
+<p>BAUD : Download baud rate</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="SPI Download interface step 21" src="/assets/images/image21-e73e7f1050a384d7852459722132f01a.png" width="426" height="663" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="factory-multi-download-interface">Factory Multi-Download interface<a class="hash-link" aria-label="Direct link to Factory Multi-Download interface" title="Direct link to Factory Multi-Download interface" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#factory-multi-download-interface">​</a></h4>
+<ul>
+<li>Factory : This mode uses relative paths, loading firmware by default from the bin</li>
+</ul>
+<p>directory in the tool directory for flashing. The Develop mode, however, uses absolute</p>
+<p>paths. The advantage of Factory mode is that once the firmware to be flashed is copied to the bin directory in the tool directory, it can be copied between factory computers without path issues.</p>
+<ul>
+<li>When Factory mode is enabled, LockSettings is enabled by default when the tool starts. Once enabled, neither the firmware paths nor the SPI flash config can be modified.</li>
+</ul>
+<p>preventing configuration errors caused by accidental changes by production line personnel. (Factory managers who need to make configurations can click LockSettings to unlock.)</p>
+<p><img decoding="async" loading="lazy" alt="Factory Multi-Download interface step 22" src="/assets/images/image22-3ec9fa206d06cb7f0a9c3c87d474bae1.png" width="678" height="468" class="img_ev3q"></p>
+<p>The download path config and SPI flash config settings on the FactoryMultiDownload interface are basically the same as those on the SPIDownload interface. Please refer to</p>
+<p><u>SPIDownload Interface</u>, and make sure you configure the serial port number and baud rate for each channel separately.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="chip-info-dump-interface">Chip Info Dump interface<a class="hash-link" aria-label="Direct link to Chip Info Dump interface" title="Direct link to Chip Info Dump interface" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#chip-info-dump-interface">​</a></h4>
+<ul>
+<li>
+<p>Device : Select the serial port number and baud rate of the relevant device.</p>
+</li>
+<li>
+<p>Read Flash: Select the start address and the size of the data to read from flash. This option is set only when reading flash.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Chip Info Dump interface step 23" src="/assets/images/image23-3479f599f826c5cb62de8bf574d9c13d.png" width="586" height="653" class="img_ev3q"></p>
+<ul>
+<li>
+<p>Function Description</p>
+</li>
+<li>
+<p>Chip Info: Reads the chip model, flash ID, and flash status register values; the data is displayed directly on the software interface.</p>
+</li>
+<li>
+<p>Read Flash: Reads data from flash. The read data is stored in a generated bin file with the format: &quot;chip MAC + read data start address + read data length + read time&quot;.</p>
+</li>
+<li>
+<p>Read eFuse: Reads the contents of the chip&#x27;s eFuse; this function is the same as</p>
+</li>
+</ul>
+<p>ESPTOOL&#x27;s summary command. The read data is stored in a generated text file with the format &quot;chip MAC + read time&quot;.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="flashing-example">Flashing example<a class="hash-link" aria-label="Direct link to Flashing example" title="Direct link to Flashing example" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#flashing-example">​</a></h3>
+<p>This section uses the ESP32-S3 series as an example to demonstrate how to perform standard and encrypted flashing.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="standard-firmware-flashing">Standard firmware flashing<a class="hash-link" aria-label="Direct link to Standard firmware flashing" title="Direct link to Standard firmware flashing" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#standard-firmware-flashing">​</a></h4>
+<p>1. Pull the GPIO0 pin low to switch the device to download mode.</p>
+<p>2. Open the download tool, select ESP32S3 for ChipType , Develop for WorkMode , UART for LoadMode , then click OK , as shown below.</p>
+<p><img decoding="async" loading="lazy" alt="Standard firmware flashing step 24" src="/assets/images/image24-aafb0696187d2252758b59a23e5456df.png" width="221" height="213" class="img_ev3q"></p>
+<p>3. On the download page, enter the bin file you want to flash and the corresponding flash</p>
+<p>address, check the checkbox next to the bin file, and enter the values you require for SPI SPEED , SPI MODE , COM , and BAUD .</p>
+<p>4. Click START to begin the download. During the download, the download tool reads the flash information and the chip&#x27;s MAC address.</p>
+<p>5. After the download completes, the download tool interface will display as shown below.</p>
+<p><img decoding="async" loading="lazy" alt="Standard firmware flashing step 25" src="/assets/images/image25-994ebe056402f933c80fe99d2ceedc25.png" width="429" height="669" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="01_oled_basic">01_OLED_Basic<a class="hash-link" aria-label="Direct link to 01_OLED_Basic" title="Direct link to 01_OLED_Basic" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#01_oled_basic">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview">​</a></h4>
+<p>This demo program is designed to verify the basic functions of the OLED on the W15. After powering on, the program initializes the OLED and then loops as follows:</p>
+<ul>
+<li>
+<ol>
+<li>Text display demo</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Basic graphics demo (rectangle, circle, line)</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Simple animation demo (moving square, breathing circle)</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Progress bar 0-100%</li>
+</ol>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware">​</a></h4>
+<ul>
+<li>
+<p>Development board: ESP32-S3 LR2021 development kit (W15)</p>
+</li>
+<li>
+<p>OLED: I2C, SDA=GPIO5, SCL=GPIO4, RST=GPIO38</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result">​</a></h4>
+<ul>
+<li>The OLED screen will sequentially display text, basic shapes (rectangle, circle, line), animations (moving square, breathing circle), and a progress bar.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Expected result step 26" src="/assets/images/image26-4111073e334b97a2b4502e8bba665f4f.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 27" src="/assets/images/image27-7804ee65a2650af1fa26ae57f04f82c9.png" width="678" height="841" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 28" src="/assets/images/image28-9ba344b70e6954e915c153748c2c4f45.png" width="678" height="933" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 29" src="/assets/images/image29-b8bd02f63765fa350e6e6fc97a71a8bf.png" width="678" height="917" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 30" src="/assets/images/image30-a677088ce2dfdfe2798c3ee642797333.png" width="678" height="979" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 31" src="/assets/images/image31-f39e387c49b2b1e72881683501283f63.png" width="678" height="887" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 32" src="/assets/images/image32-fd92a36b4e55edf758275cb4285ca922.png" width="678" height="910" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 33" src="/assets/images/image33-99dbc2b09dbc76bd6948d44a8898df6a.png" width="678" height="830" class="img_ev3q"></p>
+<p>After flashing the firmware, you can view the actual results</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="02_led_control">02_LED_Control<a class="hash-link" aria-label="Direct link to 02_LED_Control" title="Direct link to 02_LED_Control" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#02_led_control">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-1">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-1">​</a></h4>
+<p>Uses the Adafruit_NeoPixel library to drive the RGB LED connected to GPIO48,</p>
+<p>implementing basic color cycling, fast blinking, smooth color transitions, and breathing light effects.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Initializes the single on-board RGB LED using RGB color format and an 800 kHz communication rate.</p>
+</li>
+<li>
+<p>Cycles through the three primary colors—red, green, and blue—switching automatically every 500 milliseconds</p>
+</li>
+<li>
+<p>Provides a fast six-color blinking effect with red, green, blue, yellow, cyan, and magenta alternating</p>
+</li>
+<li>
+<p>Supports a smooth warm-yellow brightness gradient, with brightness gradually increasing from 0 to 255 and then decreasing back to 0</p>
+</li>
+<li>
+<p>Creates a cyan breathing light effect, with the light blinking in a slow, rhythmic pattern</p>
+</li>
+<li>
+<p>All light effects are displayed in an auto-cycling manner, with the current display state output via the serial port</p>
+</li>
+<li>
+<p>Provides the standard setColor() function for easily customizing any RGB color</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-1">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-1">​</a></h4>
+<ul>
+<li>
+<p>Connect the board to the computer with a USB cable Performance</p>
+</li>
+<li>
+<p>The built-in LED on the board will cycle through four different light effects</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Hardware connection step 34" src="/assets/images/image34-0e55b0126bc5f4071f8c424b8aa5be22.png" width="360" height="568" class="img_ev3q"></p>
+<p>After flashing the firmware, you can view the actual results:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="03_wi-fi_scan">03_Wi-Fi_Scan<a class="hash-link" aria-label="Direct link to 03_Wi-Fi_Scan" title="Direct link to 03_Wi-Fi_Scan" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#03_wi-fi_scan">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-2">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-2">​</a></h4>
+<p>This program demonstrates the Wi-Fi scanning function of the W15. At startup, it sets the Wi-Fi to STA mode and periodically scans nearby 2.4GHz Wi-Fi networks. After each scan completes, it outputs the network list via the serial port, including:</p>
+<ul>
+<li>
+<p>SSID (network name)</p>
+</li>
+<li>
+<p>RSSI (received signal strength indicator)</p>
+</li>
+<li>
+<p>Encryption type</p>
+</li>
+<li>
+<p>Channel number</p>
+</li>
+</ul>
+<p>The program automatically repeats the scan every 5 seconds, allowing you to monitor changes in the surrounding Wi-Fi environment in real time.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-2">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-2">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-1">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-1">​</a></h4>
+<ul>
+<li>
+<p>Open the serial monitor at a baud rate of 115200</p>
+</li>
+<li>
+<p>View all Wi-Fi information detected by the device</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Expected result step 35" src="/assets/images/image35-fd13d9a4741bd7fa475dd1fbe8a31c58.png" width="678" height="687" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="04_lora_oled_lr2021">04_LoRa_OLED_LR2021<a class="hash-link" aria-label="Direct link to 04_LoRa_OLED_LR2021" title="Direct link to 04_LoRa_OLED_LR2021" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#04_lora_oled_lr2021">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-3">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-3">​</a></h4>
+<p>This demonstrates the LoRa wireless transceiver function of the W15 development board,</p>
+<p>supporting one-key switching between transmit and receive modes, and flexible frequency</p>
+<p>switching, and an OLED display showing status and data in real time. It can run independently without connecting to a computer.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>At startup, the device defaults to LoRa receive mode, continuously monitoring wireless data over the air</p>
+</li>
+<li>
+<p>Short-press the BOOT button to switch between frequency bands (868MHz/915MHz/2.4GHz, etc.).</p>
+</li>
+<li>
+<p>Long-press the BOOT button to switch between receive (RX) and transmit (TX) modes</p>
+</li>
+<li>
+<p>In TX mode, a data packet containing a transmission sequence number is automatically sent every second</p>
+</li>
+<li>
+<p>In RX mode, received packets are automatically parsed, displaying signal strength (RSSI) and signal-to-noise ratio (SNR)</p>
+</li>
+<li>
+<p>The OLED screen displays the following in real time: operating mode, frequency band, transmit/receive counts, signal strength, and the latest message</p>
+</li>
+<li>
+<p>The serial port synchronously outputs transmission and reception logs, data content, and RSSI/SNR parameters for easy debugging</p>
+</li>
+<li>
+<p>Pre-configured standard LoRa parameters ensure reliable communication with other LoRa devices.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-3">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-3">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-2">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-2">​</a></h4>
+<p>Actual appearance</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 36" src="/assets/images/image36-eac5931eeb90950788d9743bf2d965db.png" width="678" height="914" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 37" src="/assets/images/image37-12e4dc2851047936df8dc78895dcc398.png" width="678" height="894" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 38" src="/assets/images/image38-dab14f8f10c1f54d721740c1f0d033d8.png" width="678" height="911" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="05_button_input">05_Button_Input<a class="hash-link" aria-label="Direct link to 05_Button_Input" title="Direct link to 05_Button_Input" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#05_button_input">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-4">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-4">​</a></h4>
+<p>The on-board BOOT button (GPIO0) is used to detect short and long presses, with the RGB LED providing visual feedback; the system also includes button debouncing and safe interrupt handling.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Uses an interrupt-based approach for button detection, ensuring fast response without occupying main loop resources</p>
+</li>
+<li>
+<p>Built-in 50-millisecond button debouncing effectively prevents false triggering caused by voltage fluctuations</p>
+</li>
+<li>
+<p>Automatically detects two operation modes: short press of less than 1000 milliseconds and long press of 1000 milliseconds or more</p>
+</li>
+<li>
+<p>On short press, the RGB LED cycles through eight colors (red, green, blue, yellow, cyan, magenta, white, and off).</p>
+</li>
+<li>
+<p>On long press, the RGB LED automatically switches to a cyan breathing light effect; long-press again to exit</p>
+</li>
+<li>
+<p>Real-time serial output of key type, press duration, cumulative count, and current LED color</p>
+</li>
+<li>
+<p>The button uses an internal pull-up configuration, requiring no external circuitry; just use the on-board BOOT button.</p>
+</li>
+<li>
+<p>The interrupt service routine (ISR) is decorated with IRAM_ATTR to ensure running stability</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-4">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-4">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-3">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-3">​</a></h4>
+<ul>
+<li>
+<p>Open the serial monitor</p>
+</li>
+<li>
+<p>Press the BOOT button to switch the LED on and off</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Expected result step 39" src="/assets/images/image39-d20aed845c5460238b19d6bfb10c4abc.png" width="678" height="688" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 40" src="/assets/images/image40-86b59363c73884ea8a938b678ebdde2d.png" width="288" height="512" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 41" src="/assets/images/image41-9b88b2ca6750b21d60275dcc03ab96d2.png" width="288" height="512" class="img_ev3q"></p>
+<p>After flashing the firmware, you can view the actual results:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="06_adc_read">06_ADC_Read<a class="hash-link" aria-label="Direct link to 06_ADC_Read" title="Direct link to 06_ADC_Read" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#06_adc_read">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-5">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-5">​</a></h4>
+<p>This project demonstrates the ADC analog acquisition capability of the W15. It periodically</p>
+<p>reads data from two ADC channels (GPIO1 and GPIO2), reduces noise by averaging multiple samples, and outputs the results to the serial port as voltage values and percentages.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Configures 12-bit ADC resolution with 11 dB attenuation (approx. 0–3.3 V range)</p>
+</li>
+<li>
+<p>Dual-channel sampling with averaging filter</p>
+</li>
+<li>
+<p>Raw value, voltage value, and percentage display</p>
+</li>
+<li>
+<p>Estimates battery voltage based on voltage divider assumptions, outputting charge status (fully charged / normal / low / needs charging)</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-5">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-5">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-4">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-4">​</a></h4>
+<ul>
+<li>
+<p>Dual-channel ADC sampling (10-point averaging)</p>
+</li>
+<li>
+<p>Raw value, voltage, and percentage display</p>
+</li>
+<li>
+<p>Battery voltage estimation and status assessment</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Expected result step 42" src="/assets/images/image42-84345a9b48cb1b730f72833480add60f.png" width="678" height="671" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="07_i2c_sensor">07_I2C_Sensor<a class="hash-link" aria-label="Direct link to 07_I2C_Sensor" title="Direct link to 07_I2C_Sensor" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#07_i2c_sensor">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-6">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-6">​</a></h4>
+<p>By powering external sensors, initializing the I2C bus, scanning all devices on the bus, and providing a framework for reading common sensor data such as temperature, humidity, and pressure, the system can quickly identify and integrate various I2C sensors.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Controls the VEXT power supply to power external I²C sensors, ensuring proper hardware operation</p>
+</li>
+<li>
+<p>Initializes the I2C bus (SDA: 17 / SCL: 18), supporting the standard 100 kHz communication rate</p>
+</li>
+<li>
+<p>Automatically scans all slave addresses on the I2C bus, identifying common devices (OLED, AHT20, SHT31, BMP280, etc.)</p>
+</li>
+<li>
+<p>Provides a framework for reading temperature, humidity, and pressure sensor data, facilitating integration with real-world sensor libraries</p>
+</li>
+<li>
+<p>Encapsulates utility functions for reading and writing generic I2C registers, which can be used directly in various I2C device drivers</p>
+</li>
+<li>
+<p>Periodically outputs sensor data; supports polling every 2 seconds</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-6">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-6">​</a></h4>
+<ul>
+<li>
+<p>Connect the board to the computer with a USB cable</p>
+</li>
+<li>
+<p>If you need to attach a sensor, you can use this program to check whether the sensor is correctly connected.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-5">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-5">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Expected result step 43" src="/assets/images/image43-f210c29b35d15308923aafe7c99f6d2c.png" width="678" height="692" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="08_deepsleep">08_DeepSleep<a class="hash-link" aria-label="Direct link to 08_DeepSleep" title="Direct link to 08_DeepSleep" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#08_deepsleep">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-7">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-7">​</a></h4>
+<p>This program implements timer wake-up, GPIO button wake-up, and a combination of both wake-up sources. Upon waking, it displays a visual signal via the RGB LED while turning off external power to reduce power consumption.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Uses RTC memory to store the variable recording the number of system boots; the data remains unchanged during deep sleep</p>
+</li>
+<li>
+<p>Automatically detects and prints the wake-up reason (timer, GPIO button, first boot, or reset)</p>
+</li>
+<li>
+<p>Supports a 10-second automatic wake-up timer</p>
+</li>
+<li>
+<p>Supports manual wake-up via GPIO0 (BOOT button)</p>
+</li>
+<li>
+<p>Adopts a dual wake-up source mode combining timer and button; the device wakes up when either condition is met</p>
+</li>
+<li>
+<p>Upon waking, the RGB LED flashes blue three times as an indicator</p>
+</li>
+<li>
+<p>Turns off the RGB LED before entering sleep mode to optimize power efficiency</p>
+</li>
+<li>
+<p>Outputs complete sleep status, wake-up information, and statistics via the serial port</p>
+</li>
+<li>
+<p>After deep sleep, the program restarts from setup() loop() function is never executed</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-7">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-7">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-6">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-6">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Expected result step 44" src="/assets/images/image44-6a3fb21b1e22a60e1f1bf2cac4733cf6.png" width="678" height="691" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="09_wi-fi_tcp">09_Wi-Fi_TCP<a class="hash-link" aria-label="Direct link to 09_Wi-Fi_TCP" title="Direct link to 09_Wi-Fi_TCP" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#09_wi-fi_tcp">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-8">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-8">​</a></h4>
+<p>This program demonstrates the data transmission and reception capabilities of a 2.4GHz Wi-Fi TCP server on the W15 development board. After connecting to a router, the device sets up a TCP server and waits for a client (such as a network debugging assistant) to connect, enabling bidirectional data pass-through, echo testing, and status monitoring.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Connects to the specified 2.4GHz Wi-Fi network in STA mode, automatically obtains an IP address, and supports automatic reconnection</p>
+</li>
+<li>
+<p>Sets up a TCP server on port 8080, waiting for remote client connections</p>
+</li>
+<li>
+<p>Supports a single client connection; automatically sends a welcome message once connected</p>
+</li>
+<li>
+<p>Receives client data and echoes it back unchanged for bidirectional pass-through testing</p>
+</li>
+<li>
+<p>Automatically sends a statistics heartbeat packet to the client every 10 seconds, containing send/receive counts and Wi-Fi signal strength</p>
+</li>
+<li>
+<p>The OLED screen displays the following information in real time: Wi-Fi status, local IP</p>
+</li>
+</ul>
+<p>address, client IP address, number of packets sent and received, and the latest message</p>
+<ul>
+<li>
+<p>Complete serial output of connection information, sent and received data, signal strength, and network parameters</p>
+</li>
+<li>
+<p>Automatically turns on VEXT to power the OLED, completing screen initialization and real-time refresh</p>
+</li>
+<li>
+<p>Automatically restores the server state on connection failure and keeps monitoring</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-8">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-8">​</a></h4>
+<ul>
+<li>
+<p>Connect the board to the computer with a USB cable</p>
+</li>
+<li>
+<p>If you cannot connect to Wi-Fi, you can attach a Wi-Fi antenna to the board</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-7">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-7">​</a></h4>
+<p>After the program runs, you can view the IP address assigned when connecting to Wi-Fi, the TCP client&#x27;s IP address, and the data received on the screen.</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 45" src="/assets/images/image45-18f3d0d0941fab1fe841b236365f7acd.png" width="678" height="966" class="img_ev3q"></p>
+<ul>
+<li>
+<p>Real-time output of connection status, received data content, and transmitted data length</p>
+</li>
+<li>
+<p>Displays Wi-Fi connection details and statistics</p>
+</li>
+<li>
+<p>For easy debugging and monitoring of the program&#x27;s running status</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Expected result step 46" src="/assets/images/image46-e82226a1486490fb8e41c4e2398cc499.png" width="678" height="690" class="img_ev3q"></p>
+<p>Use a TCP connection tool to establish a connection and send messages, and check whether the data is transmitted successfully</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 47" src="/assets/images/image47-1327b74b309cb7dfeae42c5a2ff48fde.png" width="666" height="573" class="img_ev3q"></p>
+<p>After the connection is established, the device&#x27;s serial port displays a message that the client has connected.</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 48" src="/assets/images/image48-d40a9f292f277c11c1e7d2934f19764e.png" width="678" height="691" class="img_ev3q"></p>
+<p>Sent successfully</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 49" src="/assets/images/image49-af8a11dc644ca41d2299e87c38d5af78.png" width="666" height="573" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10_ble_scan">10_BLE_Scan<a class="hash-link" aria-label="Direct link to 10_BLE_Scan" title="Direct link to 10_BLE_Scan" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#10_ble_scan">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-9">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-9">​</a></h4>
+<p>This program demonstrates the BLE Bluetooth scanning function of the W15 development board. It automatically searches for nearby Bluetooth devices and displays the device name, MAC address, and signal strength (RSSI) in real time on the OLED screen. It runs</p>
+<p>independently without pairing with a phone.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Initializes the BLE device and enables active scanning mode; sets the duration of each scan cycle to 3 seconds</p>
+</li>
+<li>
+<p>Automatically detects and records nearby BLE devices, caching information for up to 20 devices</p>
+</li>
+<li>
+<p>For unnamed Bluetooth devices, the last 8 digits of the MAC address are automatically used as the device identifier</p>
+</li>
+<li>
+<p>Scan results are displayed on the OLED screen in pages (four devices per page) with automatic page scrolling</p>
+</li>
+<li>
+<p>Real-time display of scan cycle, number of detected devices, current page number, device name, and RSSI signal strength</p>
+</li>
+<li>
+<p>The complete scan list (serial number, name, MAC, RSSI) is output via the serial port for easy debugging and viewing</p>
+</li>
+<li>
+<p>Automatically turns on the VEXT power supply for the OLED, completing screen initialization and status refresh</p>
+</li>
+<li>
+<p>A &quot;Please wait&quot; prompt is displayed on the screen during scanning, improving user experience</p>
+</li>
+<li>
+<p>After the scan completes, the results are automatically cleared and the next round begins.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-9">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-9">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-8">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-8">​</a></h4>
+<ul>
+<li>
+<p>After power-on, the OLED display initializes and BLE scanning begins.</p>
+</li>
+<li>
+<p>During scanning, the screen displays &quot;Scanning&quot;; a complete scan cycle takes 3 seconds.</p>
+</li>
+<li>
+<p>Scan results are displayed in a paged scrolling view on the OLED screen, with four devices shown per page.</p>
+</li>
+<li>
+<p>Displays device name and signal strength; for unidentified devices, the MAC address is displayed.</p>
+</li>
+<li>
+<p>If no devices are found, the screen displays a prompt that no BLE devices were discovered.</p>
+</li>
+<li>
+<p>Device information is output to the serial port, and scanning automatically restarts after each cycle completes.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Expected result step 50" src="/assets/images/image50-79bdbb69271146a58dae5c998c7682bb.png" width="678" height="689" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 51" src="/assets/images/image51-367d6a41e6b0228e6a805b4227ed128e.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 53" src="/assets/images/image53-22c3afb9d95a9323c0b824b18e38e06d.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 54" src="/assets/images/image54-efaf10f32c37f48d5e3006a33a939b07.png" width="678" height="960" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 55" src="/assets/images/image55-2f43275ce2baab6bfadac80b5c49e5b0.png" width="678" height="911" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 56" src="/assets/images/image56-e0bcf4b16b174daa445fca3da8c07a88.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 58" src="/assets/images/image58-8e41358eace6301c2b261b481417c9a1.png" width="678" height="982" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11_wi-fi_oled_shape">11_Wi-Fi_OLED_Shape<a class="hash-link" aria-label="Direct link to 11_Wi-Fi_OLED_Shape" title="Direct link to 11_Wi-Fi_OLED_Shape" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#11_wi-fi_oled_shape">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-10">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-10">​</a></h4>
+<p>This program demonstrates the web-based remote control function of the W15 development board over Wi-Fi. After the device connects to Wi-Fi, it starts a web server; users can then</p>
+<p>Access the device&#x27;s IP address via a web browser to remotely control the OLED display, adjust brightness, switch the RGB light on and off, and view the device&#x27;s running status in real time.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Connects to the specified Wi-Fi network, starts the web server on port 80, and displays the access IP on the OLED screen.</p>
+</li>
+<li>
+<p>The web interface provides a graphical control panel supporting remote switching between three display shapes: square, circle, and triangle.</p>
+</li>
+<li>
+<p>Supports custom text input via the web page, displayed in real time in the center of the OLED screen</p>
+</li>
+<li>
+<p>Equipped with a brightness slider allowing you to adjust the OLED contrast (10–255), with changes taking effect immediately</p>
+</li>
+<li>
+<p>Supports remote control of the on-board green RGB LED, with the on/off status displayed synchronously on the web page</p>
+</li>
+<li>
+<p>Provides a screen clear button that clears the OLED display and returns to the standby screen with a single click</p>
+</li>
+<li>
+<p>The web page displays Wi-Fi signal strength (RSSI), device uptime, current display mode, and LED status in real time</p>
+</li>
+<li>
+<p>Built-in automatic reconnection mechanism ensures stable and uninterrupted remote control during Wi-Fi disconnections</p>
+</li>
+<li>
+<p>Automatically turns on the VEXT power supply for the OLED, completing screen initialization and display refresh</p>
+</li>
+<li>
+<p>The website features a green tech design, optimized for viewing on various devices, including computers and phones.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-10">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-10">​</a></h4>
+<ul>
+<li>
+<p>Connect the board to the computer with a USB cable</p>
+</li>
+<li>
+<p>If you have confirmed the SSID and password are correct but still cannot connect via Wi-Fi, you need to attach an antenna to the Wi-Fi antenna connector on the back of the board.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-9">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-9">​</a></h4>
+<ul>
+<li>After entering the SSID and password, the device displays the IP address once the</li>
+</ul>
+<p>connection succeeds. You can then access the corresponding URL via a web browser.</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 60" src="/assets/images/image60-32ac395cdaf507e7fb0c3f084bd6d24f.png" width="678" height="696" class="img_ev3q"></p>
+<p>After the request succeeds, the corresponding control buttons and other elements will appear on the web page</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 61" src="/assets/images/image61-faac7a4baadfcdb22881d50e69784af0.png" width="678" height="734" class="img_ev3q"></p>
+<p>Shape display: Square</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 62" src="/assets/images/image62-ffa9ad38f12ecb7d4d98d5f41c9e4e15.png" width="678" height="982" class="img_ev3q"></p>
+<p>Shape display: Circle</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 64" src="/assets/images/image64-4ecd94617ffe05ab79696136816f1ca9.png" width="678" height="944" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 65" src="/assets/images/image65-93434a98f805c25f13c2f26b2f77e64c.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 66" src="/assets/images/image66-4a78c1fcfdb793dc5694a79da0bb00bf.png" width="678" height="68" class="img_ev3q"></p>
+<p>Custom text</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 67" src="/assets/images/image67-92a79c440d2468c570cbbe399278b8ff.png" width="678" height="871" class="img_ev3q"></p>
+<p>Control: RGB LED</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 68" src="/assets/images/image68-03c964fcf30abca2ea77f59c05cc308a.png" width="678" height="982" class="img_ev3q"></p>
+<p>Control: CLEAR OLED</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 70" src="/assets/images/image70-b9e974097330fecdcc1b773ba8a186e0.png" width="678" height="982" class="img_ev3q"></p>
+<p>Device status: The web page displays Wi-Fi signal strength (RSSI), device uptime, current display mode, and LED status in real time</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 72" src="data:image/png;base64,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/atRLIX0kkT5n8F/EKSVQczN4wb9jmrc0LKA9iBekEhvBbaO3EofxMwgvSIRkyDmJdL1YAfzOCPbdqbfpJyLFIjk6C4O2GPYN4EFwDSwzzo+L4g1Bl0Ahv+JE/2JuCyINflyl33a8S85thfSm4GNhm0HVgQx04h2sDvzZbeYHfi/FBS7ILBYZSAAAANrSURBVL2mOmNcCwyD/b/ccOrWfpHzi2107M8DfimR1iTSYqDX8L92is8bLAhiFbAf7LsG7Yn0FsPuMhi5lX5WwKXA96u7XX8mETsN70aBSE6IkQgKDuudPGGHoGVuC9anwWwi8lzlh0vSQII/Ps6Gfwg+wSk+UpyW4xKRc0d0BMM7h/O4s5Nl5DGs83WXmYiIiIgCkYiIiIgCkYiIiNSeApGIiIjUngKRiIiI1J4CkYiIiNSeApGIiIjUngKRiIiI1F5zA1EzHu4oIqK2RETGcgraiOYGogMQM4JQayYiR4iOyJMAD4xj44E8YXB0qC0RkVFBEDMCDjS/7uYGotsgrgtitkKRiIyKjiDWBjEx4OlxFHgaYmJVRqFIRKjC0Owgrgu4rfn1N3dy109C+r2El048HlhoTjMRIc9MfnWCncA94yjwA+BiKN9a4p2O7VFbIlJ3YQEXQ3pdgr9sfv3NndwV4JXAzwIXkSdNUzsmUm8B7AVuB25mfD1EAEuANwEvB2agtkSkzqL6WQ/cCHyvSfU2TO7a/EAkIiIici7QbPciIiIioxSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKT2FIhERESk9hSIREREpPYUiERERKTeQoFIRERERIFIRERERIFIRERE6k2XzERERKT2FIhEREREwIkzfQgiIiIiZ0hQ9RANAy1n+mhERERETrMWYJgqEG0Glp3hAxIRERE53ZYBm6kC0V308eozfUQiIiIip9mrgbuA4JDzFW7mF9HwahEREakPB34R+AoQfNX5Fn/EEPt57xk+MBEREZHT5b3AEPAt9pH4SEE/XTzFV/gXZnEvy9hA65k+RhEREZFT5vXADRzi3fwrO3knPTz2/wFJQqpx7A7/LAAAAABJRU5ErkJggg==" width="580" height="200" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12_ble_lr2021">12_BLE_LR2021<a class="hash-link" aria-label="Direct link to 12_BLE_LR2021" title="Direct link to 12_BLE_LR2021" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#12_ble_lr2021">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overview-11">Overview<a class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#overview-11">​</a></h4>
+<p>The Bluetooth + LoRa wireless gateway function of the W15 development board allows a phone to control LoRa data transmission via BLE and relay the received LoRa data back to the phone via BLE, achieving bidirectional transparent transmission and enabling wireless relaying without a network connection.</p>
+<p>Main features include:</p>
+<ul>
+<li>
+<p>Initializes the BLE server as a device named W15-Gateway, waiting for a mobile phone to connect</p>
+</li>
+<li>
+<p>The phone sends data via BLE; the device automatically receives it and forwards it through the LoRa module</p>
+</li>
+<li>
+<p>Monitors LoRa wireless data in real time and automatically pushes it to your phone via BLE upon receipt</p>
+</li>
+<li>
+<p>The OLED screen displays the following information in real time: BLE connection status, LoRa transmit and receive counts, the latest message, and status information</p>
+</li>
+<li>
+<p>Built-in LoRa parameter configuration: 915 MHz frequency band, 125 kHz bandwidth, SF7, sync word 0x34</p>
+</li>
+<li>
+<p>Synchronous serial output of BLE and LoRa transmission and reception logs for easy debugging</p>
+</li>
+<li>
+<p>Powers the OLED, completing screen initialization and status refresh</p>
+</li>
+<li>
+<p>Automatically restarts advertising after the BLE connection is dropped, ensuring the gateway remains available at all times</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-flow">Data flow<a class="hash-link" aria-label="Direct link to Data flow" title="Direct link to Data flow" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#data-flow">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Data flow step 73" src="/assets/images/image73-bc52a164e5b83734a66dc35b1c0f1ffa.png" width="475" height="349" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Data flow step 74" src="/assets/images/image74-8350ec48ac8e3472adf93f1ea5c5331b.png" width="400" height="401" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-connection-11">Hardware connection<a class="hash-link" aria-label="Direct link to Hardware connection" title="Direct link to Hardware connection" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-connection-11">​</a></h4>
+<ul>
+<li>Connect the board to the computer with a USB cable</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="expected-result-10">Expected result<a class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#expected-result-10">​</a></h4>
+<ul>
+<li>
+<p>After power-on, the OLED display initializes, and the LoRa module and BLE service start automatically.</p>
+</li>
+<li>
+<p>BLE advertises under the name W15-Gateway, waiting for a phone to connect</p>
+</li>
+<li>
+<p>Once the phone connects via BLE, the OLED display shows &quot;BLE connected,&quot; and the gateway enters standby mode</p>
+</li>
+<li>
+<p>The phone sends data via BLE; the W15 receives it and transmits it via LoRa</p>
+</li>
+<li>
+<p>Upon receiving LoRa data, the W15 automatically passes it back to the phone via BLE</p>
+</li>
+<li>
+<p>The OLED display updates the BLE status, LoRa transmit/receive counts, and the latest message in real time</p>
+</li>
+<li>
+<p>Synchronous serial printing of BLE and LoRa transmitted/received data and status information</p>
+</li>
+<li>
+<p>After the BLE connection is dropped, the device automatically resumes advertising, while LoRa continues monitoring the signal</p>
+</li>
+</ul>
+<p>You can search for and download the nRF Connect app in the major mobile app stores; this app allows your phone to search for and connect to Bluetooth devices.</p>
+<ul>
+<li>
+<p>Android: <a href="https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&amp;hl=en" target="_blank" rel="noopener noreferrer"><u>nRF Connect</u></a></p>
+</li>
+<li>
+<p>iOS: <a href="https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403" target="_blank" rel="noopener noreferrer"><u>nRF Connect</u></a></p>
+</li>
+</ul>
+<p>Connect via the Bluetooth app</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 75" src="/assets/images/image75-475f9c9641fa1fae4a9f64b78067d467.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 76" src="/assets/images/image76-66feca6326bcd76dffc5f421a5c8606b.png" width="678" height="404" class="img_ev3q"></p>
+<p>Tap this button to send data</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 77" src="/assets/images/image77-aba58f3f098fbac338d33e62f18c5bc6.png" width="678" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 78" src="/assets/images/image78-ddaa03a09e0f3677dd32600761294a5c.png" width="678" height="406" class="img_ev3q"></p>
+<p>You can select the data type you want to send</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 79" src="/assets/images/image79-5ed62d3a1385dfc33aa4a3e5b9473d72.png" width="678" height="562" class="img_ev3q"></p>
+<p>Data received on the phone</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 80" src="/assets/images/image80-56310def55e34125f721bb89724f806b.png" width="590" height="982" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 81" src="/assets/images/image81-02ff29304fa6b4c4298b015ec7ee976b.png" width="590" height="230" class="img_ev3q"></p>
+<p>Then you can view on the device the data transmitted by the LoRa node</p>
+<p><img decoding="async" loading="lazy" alt="Expected result step 82" src="/assets/images/image82-5e083e7c4cf088b1a49e5dd5c5573774.png" width="678" height="871" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#resources">​</a></h2>
+<p>The source package identifies the following companion files. Add the final download links here after the files have been uploaded to the release repository:</p>
+<ul>
+<li>Arduino examples: <code>W15_demo</code></li>
+<li>Firmware flashing utility: <code>flash_download_tool</code></li>
+<li>Hardware files: <code>W15 schematic</code> and <code>W15 pin layout</code></li>
+<li>Mechanical file: <code>W15 3D product model</code></li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/W13/Mesh_Tracker_W13"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Mesh Tracker W13 - WiFi LoRa Mesh GPS Tracking Node</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/W16/W16_LR2021_RF_Transceiver_Module"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">W16 LR2021 RF Transceiver Module</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#product-overview">Product overview</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#product-introduction">Product introduction</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#product-image">Product image</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#target-applications">Target applications</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#specifications">Specifications</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-specifications">Hardware specifications</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#software-support">Software support</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#development-frameworks">Development frameworks</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#protocol-support">Protocol support</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#pinout">Pinout</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#dimensions">Dimensions</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#mechanical-drawing">Mechanical drawing</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#getting-started">Getting started</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#hardware-requirements">Hardware requirements</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#software-requirements">Software requirements</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#arduino-ide-setup">Arduino IDE setup</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#set-up-the-development-environment">Set up the development environment</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#install-arduino-ide">Install Arduino IDE</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#install-the-esp32-board-package">Install the ESP32 board package</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#select-the-board">Select the board</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#configure-the-board-parameters">Configure the board parameters</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#install-the-required-libraries">Install the required libraries</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#example-programs-and-firmware-files">Example programs and firmware files</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#flash-precompiled-firmware">Flash precompiled firmware</a><ul><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#flash-download-tool">Flash Download Tool</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#tool-overview">Tool overview</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#flashing-example">Flashing example</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#01_oled_basic">01_OLED_Basic</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#02_led_control">02_LED_Control</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#03_wi-fi_scan">03_Wi-Fi_Scan</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#04_lora_oled_lr2021">04_LoRa_OLED_LR2021</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#05_button_input">05_Button_Input</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#06_adc_read">06_ADC_Read</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#07_i2c_sensor">07_I2C_Sensor</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#08_deepsleep">08_DeepSleep</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#09_wi-fi_tcp">09_Wi-Fi_TCP</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#10_ble_scan">10_BLE_Scan</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#11_wi-fi_oled_shape">11_Wi-Fi_OLED_Shape</a></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#12_ble_lr2021">12_BLE_LR2021</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/W15/W15_ESP32-S3_LR2021_DEV_KIT#resources">Resources</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.meshnology.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Homepage<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://meshnology.com/pages/contact/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact Us<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Follow Us</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/meshnology" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@meshnology/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.facebook.com/profile.php?id=61574010301135/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Facebook<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.instagram.com/meshnology/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Instagram<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Meshnology.</div></div></div></footer></div>
 </body>
 </html>
